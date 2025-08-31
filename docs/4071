@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>UI Browser 3 Project Plan - UI Browser - Late Night Software Ltd.</title>
+    <meta name="description" content="Continuing the discussion from UI Browser Documents: 
+
+Reading
+
+Swift Primary Sources
+
+Websites
+
+Swift: https://swift.org
+
+Swift documentation: https://swift.org/documentation/#the-swift-programming-language
+
+Swift Blog:&amp;hellip;">
+    <meta name="generator" content="Discourse 2.9.0.beta14 - https://github.com/discourse/discourse version 30e7b716b0abb2273086b3013e0da503f03c4679">
+<link rel="icon" type="image/png" href="https://forum.latenightsw.com/uploads/default/optimized/1X/8d61be2b3df1a0f8a3ff4c2735336db67573579e_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://forum.latenightsw.com/uploads/default/optimized/1X/1e7f2ed7fb94bd744bd472a3c9dc6a0106e92ba8_2_180x180.png">
+<meta name="theme-color" media="all" content="#ffffff">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="https://forum.latenightsw.com/t/ui-browser-3-project-plan/4071" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://forum.latenightsw.com/opensearch.xml" title="Late Night Software Ltd. Search">
+
+    <link href="/stylesheets/color_definitions_light_2_4_526de384aaf63d42e089c418db1d3409079d99c3.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="/stylesheets/desktop_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="/stylesheets/chat_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="chat"  />
+  <link href="/stylesheets/discourse-chat-integration_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="discourse-chat-integration"  />
+  <link href="/stylesheets/discourse-details_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="/stylesheets/discourse-docs_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="discourse-docs"  />
+  <link href="/stylesheets/discourse-local-dates_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="/stylesheets/discourse-narrative-bot_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="/stylesheets/discourse-presence_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="/stylesheets/discourse-solved_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="discourse-solved"  />
+  <link href="/stylesheets/discourse-user-notes_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="discourse-user-notes"  />
+  <link href="/stylesheets/discourse-whos-online_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="discourse-whos-online"  />
+  <link href="/stylesheets/lazy-yt_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="lazy-yt"  />
+  <link href="/stylesheets/poll_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="/stylesheets/chat_desktop_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="chat_desktop"  />
+  <link href="/stylesheets/poll_desktop_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/desktop_theme_14_02e5e18113bb72c3cf9db463989c04be49304f7c.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="14" data-theme-name="discotoc"/>
+<link href="/stylesheets/desktop_theme_4_2f2f3144f30380742fa14f52ece149d405bec066.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="4" data-theme-name="lns light"/>
+
+    
+    <meta id="data-ga-universal-analytics" data-tracking-code="UA-93638231-2" data-json="{&quot;cookieDomain&quot;:&quot;forum.latenightsw.com&quot;}" data-auto-link-domains="">
+
+  <link rel="preload" href="/assets/google-universal-analytics-v3-4195304cc8fc9564a86cfaf637f43e2582acbb938c5f563f03b3c967c4bf07a4.js" as="script">
+<script defer src="/assets/google-universal-analytics-v3-4195304cc8fc9564a86cfaf637f43e2582acbb938c5f563f03b3c967c4bf07a4.js"></script>
+
+
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;UI Browser 3 Project Plan&#39;" href="https://forum.latenightsw.com/t/ui-browser-3-project-plan/4071.rss" />
+    <meta property="og:site_name" content="Late Night Software Ltd." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.latenightsw.com/uploads/default/original/2X/9/96ad8114deff100522ea5b3ec2ae32c5f995f0fa.png" />
+<meta property="og:image" content="https://forum.latenightsw.com/uploads/default/original/2X/9/96ad8114deff100522ea5b3ec2ae32c5f995f0fa.png" />
+<meta property="og:url" content="https://forum.latenightsw.com/t/ui-browser-3-project-plan/4071" />
+<meta name="twitter:url" content="https://forum.latenightsw.com/t/ui-browser-3-project-plan/4071" />
+<meta property="og:title" content="UI Browser 3 Project Plan" />
+<meta name="twitter:title" content="UI Browser 3 Project Plan" />
+<meta property="og:description" content="Continuing the discussion from UI Browser Documents:   Reading  Swift Primary Sources  Websites  Swift: https://swift.org  Swift documentation: https://swift.org/documentation/#the-swift-programming-language  Swift Blog: https://swift.org/blog/  Apple Swift: https://developer.apple.com/swift/  Apple Swift documenation: https://developer.apple.com/swift/resources/  Apple Swift Playgrounds (on iPad): https://developer.apple.com/swift/playgrounds/    Official Documentation  Xcode + Swift Resources:..." />
+<meta name="twitter:description" content="Continuing the discussion from UI Browser Documents:   Reading  Swift Primary Sources  Websites  Swift: https://swift.org  Swift documentation: https://swift.org/documentation/#the-swift-programming-language  Swift Blog: https://swift.org/blog/  Apple Swift: https://developer.apple.com/swift/  Apple Swift documenation: https://developer.apple.com/swift/resources/  Apple Swift Playgrounds (on iPad): https://developer.apple.com/swift/playgrounds/    Official Documentation  Xcode + Swift Resources:..." />
+<meta property="article:published_time" content="2022-11-28T19:59:44+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler">
+    	<header class="lns-site-header" role="banner">
+		<div class="lns-header-main">
+			<h1 class="lns-site-title"><a href="http://latenightsw.com/" rel="home">Late Night Software</a></h1>
+
+			<nav class="lns-site-navigation lns-primary-navigation" role="navigation">
+				<div class="lns-menu-main-menu-container">
+					<ul id="primary-menu" class="lns-nav-menu">
+						<li id="menu-item-959" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-959"><a href="http://latenightsw.com/"><strong>Script Debugger 8</strong></a></li>
+						<li id="menu-item-962" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-962"><a href="http://latenightsw.com/download/"><strong>Download</strong></a></li>
+						<li id="menu-item-960" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item menu-item-960"><a href="http://forum.latenightsw.com">Forum</a></li>
+						<li id="menu-item-961" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-961"><a href="http://latenightsw.com/support/">Support</a></li>
+						<li id="menu-item-957" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-957"><a href="http://latenightsw.com/lnsblog/">Blog</a></li>
+						<li id="menu-item-964" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-964"><a href="http://latenightsw.com/company/">Company</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+
+<link rel="preload" href="/theme-javascripts/25785c29cfca3c390246b59eaa9819f095b56ebb.js?__ws=forum.latenightsw.com" as="script">
+<script defer="" src="/theme-javascripts/25785c29cfca3c390246b59eaa9819f095b56ebb.js?__ws=forum.latenightsw.com" data-theme-id="15"></script>
+
+    <header>
+  <a href="/">
+    Late Night Software Ltd.
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/ui-browser-3-project-plan/4071">UI Browser 3 Project Plan</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="https://forum.latenightsw.com/c/uibrowser/17" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #92278F'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>UI Browser</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://forum.latenightsw.com/tag/documentation' class='discourse-tag' rel="tag">documentation</a>, 
+            <a href='https://forum.latenightsw.com/tag/ui-browser-4' class='discourse-tag' rel="tag">ui-browser-4</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+
+      <div id='post_1' itemscope itemtype='http://schema.org/DiscussionForumPosting' class='topic-body crawler-post'>
+        <div class='crawler-post-meta'>
+          <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+            <meta itemprop='name' content='Late Night Software'>
+              <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+                <meta itemprop='url' content='https://forum.latenightsw.com/uploads/default/original/1X/1e7f2ed7fb94bd744bd472a3c9dc6a0106e92ba8.png'>
+              </div>
+          </div>
+          <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <a itemprop="url" href='https://forum.latenightsw.com/u/alldritt'><span itemprop='name'>alldritt</span></a>
+            (Mark Alldritt)
+          </span>
+
+          <link itemprop="mainEntityOfPage" href="https://forum.latenightsw.com/t/ui-browser-3-project-plan/4071">
+
+
+          <span class="crawler-post-infos">
+              <time itemprop='datePublished' datetime='2022-11-28T19:59:44Z' class='post-time'>
+                November 28, 2022,  7:59pm
+              </time>
+              <meta itemprop='dateModified' content='2022-11-28T21:17:58Z'>
+          <span itemprop='position'>#1</span>
+          </span>
+        </div>
+        <div class='post' itemprop='articleBody'>
+          <p>Continuing the discussion from <a href="https://forum.latenightsw.com/t/ui-browser-documents/4065">UI Browser Documents</a>:</p>
+<ul>
+<li>Reading
+<ul>
+<li>Swift Primary Sources
+<ul>
+<li>Websites
+<ul>
+<li>Swift: <a href="https://swift.org">https://swift.org</a>
+</li>
+<li>Swift documentation: <a href="https://swift.org/documentation/#the-swift-programming-language">https://swift.org/documentation/#the-swift-programming-language</a>
+</li>
+<li>Swift Blog: <a href="https://swift.org/blog/">https://swift.org/blog/</a>
+</li>
+<li>Apple Swift: <a href="https://developer.apple.com/swift/">https://developer.apple.com/swift/</a>
+</li>
+<li>Apple Swift documenation: <a href="https://developer.apple.com/swift/resources/">https://developer.apple.com/swift/resources/</a>
+</li>
+<li>Apple Swift Playgrounds (on iPad): <a href="https://developer.apple.com/swift/playgrounds/">https://developer.apple.com/swift/playgrounds/</a>
+</li>
+</ul>
+</li>
+<li>Official Documentation
+<ul>
+<li>Xcode + Swift Resources: <a href="https://developer.apple.com/swift/resources/">https://developer.apple.com/swift/resources/</a>
+</li>
+<li>Swift Standard Library: <a href="https://developer.apple.com/reference/swift">https://developer.apple.com/reference/swift</a>
+</li>
+<li>Swift Package Manager: <a href="https://docs.swift.org/package-manager/">https://docs.swift.org/package-manager/</a>
+</li>
+<li>Swift API Design Guidelines: <a href="https://swift.org/documentation/api-design-guidelines/">https://swift.org/documentation/api-design-guidelines/</a>
+</li>
+<li>Migrating to Swift 4: <a href="https://swift.org/migration-guide-swift4/">https://swift.org/migration-guide-swift4/</a>
+</li>
+<li>Migrating to Swift 4.2: <a href="https://swift.org/migration-guide-swift4.2/">https://swift.org/migration-guide-swift4.2/</a>
+</li>
+<li>Migrating to Swift 5: <a href="https://swift.org/migration-guide-swift5/">https://swift.org/migration-guide-swift5/</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Swift Third-Party Documentation
+<ul>
+<li>Frameworks</li>
+<li>Applications</li>
+</ul>
+</li>
+<li>Example Code
+<ul>
+<li>Frameworks</li>
+<li>Applications</li>
+</ul>
+</li>
+<li>Swift Code Structure Documented Principles
+<ul>
+<li>
+<p>Implement PFAssistive Framework as a Swift framework named PFAssistiveFramework4</p>
+<ul>
+<li>"Swift classes can be disambiguated based on the module they reside in. For example, the fully qualified name of a Swift class named DataManager in a framework named MyFramework is MyFramework.DataManager.”</li>
+</ul>
+<p>Excerpt From: Apple Inc. “Using Swift with Cocoa and Objective-C (Swift 3.1 Edition).” iBooks. <a href="https://itun.es/us/utTW7.l">https://itun.es/us/utTW7.l</a></p>
+<ul>
+<li>“If you’re working with frameworks, make sure the Defines Module (DEFINES_MODULE) build setting under Packaging is set to “Yes”.”</li>
+</ul>
+<p>Excerpt From: Apple Inc. “Using Swift with Cocoa and Objective-C (Swift 3.1 Edition).” iBooks. <a href="https://itun.es/us/utTW7.l">https://itun.es/us/utTW7.l</a></p>
+<ul>
+<li>“A module is a single unit of code distribution—a framework or application that is built and shipped as a single unit and that can be imported by another module with Swift’s import keyword.”</li>
+</ul>
+<p>Excerpt From: Apple Inc. “The Swift Programming Language (Swift 3.1).” iBooks.</p>
+<ul>
+<li>“Each build target (such as an app bundle or framework) in Xcode is treated as a separate module in Swift. If you group together aspects of your app’s code as a stand-alone framework—perhaps to encapsulate and reuse that code across multiple applications—then everything you define within that framework will be part of a separate module when it is imported and used within an app, or when it is used within another framework.”</li>
+</ul>
+<p>Excerpt From: Apple Inc. “The Swift Programming Language (Swift 3.1).” iBooks.</p>
+<ul>
+<li>“A source file is a single Swift source code file within a module (in effect, a single file within an app or framework). Although it is common to define individual types in separate source files, a single source file can contain definitions for multiple types, functions, and so on.”</li>
+</ul>
+<p>Excerpt From: Apple Inc. “The Swift Programming Language (Swift 3.1).” iBooks.</p>
+<ul>
+<li>“You typically use open or public access when specifying the public interface to a framework.”</li>
+</ul>
+<p>Excerpt From: Apple Inc. “The Swift Programming Language (Swift 3.1).” iBooks.</p>
+<ul>
+<li>“You typically use internal access when defining an app’s or a framework’s internal structure.</li>
+</ul>
+<p>Excerpt From: Apple Inc. “The Swift Programming Language (Swift 3.1).” iBooks.</p>
+<ul>
+<li>“When you develop a framework, mark the public-facing interface to that framework as open or public so that it can be viewed and accessed by other modules, such as an app that imports the framework. This public-facing interface is the application programming interface (or API) for the framework.</li>
+</ul>
+<p>NOTE</p>
+<p>Any internal implementation details of your framework can still use the default access level of internal, or can be marked as private or file private if you want to hide them from other parts of the framework’s internal code. You need to mark an entity as open or public only if you want it to become part of your framework’s API.”</p>
+<p>Excerpt From: Apple Inc. “The Swift Programming Language (Swift 3.1).” iBooks.</p>
+</li>
+<li>
+<p>Implement UI Browser as a Swift application</p>
+<ul>
+<li>“A Swift app target is a module itself, so the fully qualified name of a Swift class named Observer in an app called MyGreatApp is MyGreatApp.Observer.”</li>
+</ul>
+<p>Excerpt From: Apple Inc. “Using Swift with Cocoa and Objective-C (Swift 3.1 Edition).” iBooks. <a href="https://itun.es/us/utTW7.l">https://itun.es/us/utTW7.l</a></p>
+<ul>
+<li>“You can import external frameworks that have a pure Objective-C codebase, a pure Swift codebase, or a mixed-language codebase. The process for importing an external framework is the same whether the framework is written in a single language or contains files from both languages. When you import an external framework, make sure the Defines Module build setting for the framework you’re importing is set to “Yes”.”</li>
+</ul>
+<p>Excerpt From: Apple Inc. “Using Swift with Cocoa and Objective-C (Swift 3.1 Edition).” iBooks. <a href="https://itun.es/us/utTW7.l">https://itun.es/us/utTW7.l</a></p>
+<ul>
+<li>“You can import a framework into any Swift file within a different target using the following syntax: import FrameworkName”</li>
+</ul>
+<p>Excerpt From: Apple Inc. “Using Swift with Cocoa and Objective-C (Swift 3.1 Edition).” iBooks. <a href="https://itun.es/us/utTW7.l">https://itun.es/us/utTW7.l</a></p>
+</li>
+</ul>
+</li>
+<li>Ui Browser Plan Overview
+<ul>
+<li>Build accessibility framework and application code in tandem
+<ul>
+<li>For the application code, maintain the UI Browser 3.0.0 Change Log</li>
+<li>For the framework code, write it from scratch, starting with the basics needed to run UI Browser to its current state.</li>
+</ul>
+</li>
+<li>Create Playgrounds and unit tests in tandem</li>
+<li>Document the process by features and functionality rather than code organization</li>
+<li>Keep up-to-date Change Logs in traditional form</li>
+</ul>
+</li>
+<li>UI Browser Coding Process
+<ul>
+<li>Framework<br>
+Rewrite PFAssistiveFramework4 from scratch in Swift. Use it in the new UIBrowser3 application.
+<ul>
+<li>Create a new PFAssistiveFramework4 project. The UIBrowser3 project and workspace were created at the same time, and the PFAssistiveFramework4 project was added to the workspace alongside the UIBrowser3 project.</li>
+<li>Framework Issues
+<ul>
+<li>Swift is a statically typed language, so in the AccessibilityElement class’s init() method I cannot assign a RootAccessibilityElement class type to self when a newly created element has an AXRole of application. This is therefore a good time to get rid of the RootAccessibilityElement subclass and use AccessibilityElement for all AXUIElementRef (AXUIElement in Swift) instances just as the Accessibillity API itself does.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Application<br>
+Rewrite the UI Browser application from scratch in Swift using storyboards and container views, revise and modernize the user interface, refactor and update the class structure, and add new features. Use the new PFAssistiveFramework4 in it.</li>
+</ul>
+</li>
+</ul>
+        </div>
+
+        <meta itemprop='headline' content='UI Browser 3 Project Plan'>
+          <meta itemprop='keywords' content='documentation, ui-browser-4'>
+
+        <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+           <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+           <meta itemprop="userInteractionCount" content="0" />
+           <span class='post-likes'></span>
+         </div>
+
+         <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+            <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+            <meta itemprop="userInteractionCount" content="0" />
+          </div>
+
+            <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://forum.latenightsw.com/t/ui-browser-4-documents/4065" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://forum.latenightsw.com/t/ui-browser-4-documents/4065'>
+                      <span itemprop='name'>UI Browser 4 Documents</span>
+                    </a>
+                    <meta itemprop='position' content='14'>
+                  </div>
+            </div>
+      </div>
+
+
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/tos' itemprop="url">Terms of Service </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/privacy' itemprop="url">Privacy Policy </a>
+        </span>
+      </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    <a rel="me" href="https://mstdn.ca/@alldritt">Mastodon</a>
+  </body>
+  
+</html>

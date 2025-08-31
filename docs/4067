@@ -1,0 +1,1517 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>UI Browser 4 4.0.0 Change Log - UI Browser - Late Night Software Ltd.</title>
+    <meta name="description" content="Continuing the discussion from UI Browser Documents: 
+UI Browser 3 3.0.0 (2017 - Swift 4, 5) 
+Change Log 
+Rewrite the UI Browser application from scratch in Swift using storyboards and container views, revise and moderni&amp;hellip;">
+    <meta name="generator" content="Discourse 2.9.0.beta14 - https://github.com/discourse/discourse version 30e7b716b0abb2273086b3013e0da503f03c4679">
+<link rel="icon" type="image/png" href="https://forum.latenightsw.com/uploads/default/optimized/1X/8d61be2b3df1a0f8a3ff4c2735336db67573579e_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://forum.latenightsw.com/uploads/default/optimized/1X/1e7f2ed7fb94bd744bd472a3c9dc6a0106e92ba8_2_180x180.png">
+<meta name="theme-color" media="all" content="#ffffff">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="https://forum.latenightsw.com/t/ui-browser-4-4-0-0-change-log/4067" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://forum.latenightsw.com/opensearch.xml" title="Late Night Software Ltd. Search">
+
+    <link href="/stylesheets/color_definitions_light_2_4_526de384aaf63d42e089c418db1d3409079d99c3.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="/stylesheets/desktop_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="/stylesheets/chat_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="chat"  />
+  <link href="/stylesheets/discourse-chat-integration_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="discourse-chat-integration"  />
+  <link href="/stylesheets/discourse-details_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="/stylesheets/discourse-docs_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="discourse-docs"  />
+  <link href="/stylesheets/discourse-local-dates_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="/stylesheets/discourse-narrative-bot_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="/stylesheets/discourse-presence_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="/stylesheets/discourse-solved_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="discourse-solved"  />
+  <link href="/stylesheets/discourse-user-notes_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="discourse-user-notes"  />
+  <link href="/stylesheets/discourse-whos-online_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="discourse-whos-online"  />
+  <link href="/stylesheets/lazy-yt_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="lazy-yt"  />
+  <link href="/stylesheets/poll_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="/stylesheets/chat_desktop_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="chat_desktop"  />
+  <link href="/stylesheets/poll_desktop_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/desktop_theme_14_02e5e18113bb72c3cf9db463989c04be49304f7c.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="14" data-theme-name="discotoc"/>
+<link href="/stylesheets/desktop_theme_4_2f2f3144f30380742fa14f52ece149d405bec066.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="4" data-theme-name="lns light"/>
+
+    
+    <meta id="data-ga-universal-analytics" data-tracking-code="UA-93638231-2" data-json="{&quot;cookieDomain&quot;:&quot;forum.latenightsw.com&quot;}" data-auto-link-domains="">
+
+  <link rel="preload" href="/assets/google-universal-analytics-v3-4195304cc8fc9564a86cfaf637f43e2582acbb938c5f563f03b3c967c4bf07a4.js" as="script">
+<script defer src="/assets/google-universal-analytics-v3-4195304cc8fc9564a86cfaf637f43e2582acbb938c5f563f03b3c967c4bf07a4.js"></script>
+
+
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;UI Browser 4 4.0.0 Change Log&#39;" href="https://forum.latenightsw.com/t/ui-browser-4-4-0-0-change-log/4067.rss" />
+    <meta property="og:site_name" content="Late Night Software Ltd." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.latenightsw.com/uploads/default/original/2X/9/96ad8114deff100522ea5b3ec2ae32c5f995f0fa.png" />
+<meta property="og:image" content="https://forum.latenightsw.com/uploads/default/original/2X/9/96ad8114deff100522ea5b3ec2ae32c5f995f0fa.png" />
+<meta property="og:url" content="https://forum.latenightsw.com/t/ui-browser-4-4-0-0-change-log/4067" />
+<meta name="twitter:url" content="https://forum.latenightsw.com/t/ui-browser-4-4-0-0-change-log/4067" />
+<meta property="og:title" content="UI Browser 4 4.0.0 Change Log" />
+<meta name="twitter:title" content="UI Browser 4 4.0.0 Change Log" />
+<meta property="og:description" content="Continuing the discussion from UI Browser Documents:  UI Browser 3 3.0.0 (2017 - Swift 4, 5)  Change Log  Rewrite the UI Browser application from scratch in Swift using storyboards and container views, revise and modernize the user interface, refactor and update the class structure, and add new features.   2017-03-09 (3.0.0 build 1) Create a new UIBrowser3 project and a new PFAssistiveFramework4 workspace, and add the project to the workspace. The PFAssistiveFramework4 project was created at the..." />
+<meta name="twitter:description" content="Continuing the discussion from UI Browser Documents:  UI Browser 3 3.0.0 (2017 - Swift 4, 5)  Change Log  Rewrite the UI Browser application from scratch in Swift using storyboards and container views, revise and modernize the user interface, refactor and update the class structure, and add new features.   2017-03-09 (3.0.0 build 1) Create a new UIBrowser3 project and a new PFAssistiveFramework4 workspace, and add the project to the workspace. The PFAssistiveFramework4 project was created at the..." />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="33 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="1 ❤" />
+<meta property="article:published_time" content="2022-11-28T19:47:04+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler">
+    	<header class="lns-site-header" role="banner">
+		<div class="lns-header-main">
+			<h1 class="lns-site-title"><a href="http://latenightsw.com/" rel="home">Late Night Software</a></h1>
+
+			<nav class="lns-site-navigation lns-primary-navigation" role="navigation">
+				<div class="lns-menu-main-menu-container">
+					<ul id="primary-menu" class="lns-nav-menu">
+						<li id="menu-item-959" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-959"><a href="http://latenightsw.com/"><strong>Script Debugger 8</strong></a></li>
+						<li id="menu-item-962" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-962"><a href="http://latenightsw.com/download/"><strong>Download</strong></a></li>
+						<li id="menu-item-960" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item menu-item-960"><a href="http://forum.latenightsw.com">Forum</a></li>
+						<li id="menu-item-961" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-961"><a href="http://latenightsw.com/support/">Support</a></li>
+						<li id="menu-item-957" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-957"><a href="http://latenightsw.com/lnsblog/">Blog</a></li>
+						<li id="menu-item-964" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-964"><a href="http://latenightsw.com/company/">Company</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+
+<link rel="preload" href="/theme-javascripts/25785c29cfca3c390246b59eaa9819f095b56ebb.js?__ws=forum.latenightsw.com" as="script">
+<script defer="" src="/theme-javascripts/25785c29cfca3c390246b59eaa9819f095b56ebb.js?__ws=forum.latenightsw.com" data-theme-id="15"></script>
+
+    <header>
+  <a href="/">
+    Late Night Software Ltd.
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/ui-browser-4-4-0-0-change-log/4067">UI Browser 4 4.0.0 Change Log</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="https://forum.latenightsw.com/c/uibrowser/17" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #92278F'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>UI Browser</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://forum.latenightsw.com/tag/documentation' class='discourse-tag' rel="tag">documentation</a>, 
+            <a href='https://forum.latenightsw.com/tag/ui-browser-4' class='discourse-tag' rel="tag">ui-browser-4</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+
+      <div id='post_1' itemscope itemtype='http://schema.org/DiscussionForumPosting' class='topic-body crawler-post'>
+        <div class='crawler-post-meta'>
+          <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+            <meta itemprop='name' content='Late Night Software'>
+              <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+                <meta itemprop='url' content='https://forum.latenightsw.com/uploads/default/original/1X/1e7f2ed7fb94bd744bd472a3c9dc6a0106e92ba8.png'>
+              </div>
+          </div>
+          <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <a itemprop="url" href='https://forum.latenightsw.com/u/alldritt'><span itemprop='name'>alldritt</span></a>
+            (Mark Alldritt)
+          </span>
+
+          <link itemprop="mainEntityOfPage" href="https://forum.latenightsw.com/t/ui-browser-4-4-0-0-change-log/4067">
+
+
+          <span class="crawler-post-infos">
+              <time itemprop='datePublished' datetime='2022-11-28T19:47:04Z' class='post-time'>
+                November 28, 2022,  7:47pm
+              </time>
+              <meta itemprop='dateModified' content='2022-11-28T21:18:18Z'>
+          <span itemprop='position'>#1</span>
+          </span>
+        </div>
+        <div class='post' itemprop='articleBody'>
+          <p>Continuing the discussion from <a href="https://forum.latenightsw.com/t/ui-browser-documents/4065">UI Browser Documents</a>:</p>
+<p>UI Browser 3 3.0.0 (2017 - Swift 4, 5)<br>
+Change Log</p>
+<p>Rewrite the UI Browser application from scratch in Swift using storyboards and container views, revise and modernize the user interface, refactor and update the class structure, and add new features.</p>
+<h2>
+<a name="h-2017-03-09-300-build-1-1" class="anchor" href="#h-2017-03-09-300-build-1-1"></a>2017-03-09 (3.0.0 build 1)</h2>
+<p>Create a new UIBrowser3 project and a new PFAssistiveFramework4 workspace, and add the project to the workspace. The PFAssistiveFramework4 project was created at the same time in a separate project located elsewhere and added to the workspace.</p>
+<ul>
+<li>Started development on macOS Sierra 10.12.3, Xcode 8.2.1 and Swift version 3.0.2.</li>
+<li>Created a new Xcode Cocoa Application project with Product Name “UIBrowser3”, Language Swift, Use Storyboards, Include Unit Tests and Include UI Tests, in PreForm Products/UI Browser/UI Browser 3 Code. [Now UI Browser 3 Code 3.0.0]</li>
+<li>Created a new UIBrowser3 workspace and added the new PFAssistiveFramework4 and UIBrowser3 projects to it.</li>
+<li>Left the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting at 1, despite the requirement of <a href="https://developer.apple.com/library/content/technotes/tn2420/_index.html#//apple_ref/doc/uid/DTS40016603" class="inline-onebox">Technical Note TN2420: Version Numbers and Build Numbers</a> that “For macOS apps, build numbers must monotonically increase even across different versions. In other words, for macOS apps you cannot use the same build numbers again in different release trains”, on the theory that UI Browser 3 in Swift is a new product.</li>
+<li>Left the Info.plist CFBundleVersion (“Bundle version”) at 1.</li>
+<li>Revised Info.plist by setting CFBundleShortVersionString (“Bundle versions string, short”) to “3.0.0” and <code>NSHumanReadableCopyright</code> (“Copyright (human-readable)”) to “Copyright © 2017 Bill Cheeseman. All rights reserved. Used by permission.”</li>
+<li>Revised the AppDelegate.swift template heading by changing the copyright to “Copyright © 2017 Bill Cheeseman. All rights reserved. Used by permission.” and adding the line “Version 3.0.0”.</li>
+<li>Revised the ViewController.swift template heading by changing the copyright to “Copyright © 2017 Bill Cheeseman. All rights reserved. Used by permission.” and adding the line “Version 3.0.0”.</li>
+<li>Revised ViewController.swift viewDidLoad() by setting constant element to UIElement() and calling element.shoutOut() to log the name of element’s class.</li>
+<li>Built and ran the UIBrowser3 workspace.</li>
+<li>Saved a snapshot of build version 1.</li>
+</ul>
+<h2>
+<a name="h-2017-03-09-300-build-2-2" class="anchor" href="#h-2017-03-09-300-build-2-2"></a>2017-03-09 (3.0.0 build 2)</h2>
+<p>Create MainWindowController.swift as the main window’s delegate, implement its <code>windowShouldClose(_:)</code> delegate method to control the main window’s size on relaunch using the frameAutosaveName mechanism, rename the ViewController.swift template as MainViewController.swift, and set the initial Main.storyboard template’s settings.</p>
+<ul>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 2.</li>
+<li>Revised Info.plist by setting CFBundleVersion (“Bundle version”) to 2.</li>
+<li>Changed the target’s General - Identity - Application Category to Developer Tools.</li>
+<li>Created a new Cocoa Class file MainWindowController.swift as a subclass of NSWindowController with no XIB file.</li>
+<li>Revised the MainWindowController.swift template heading by changing the copyright to “Copyright © 2017 Bill Cheeseman. All rights reserved. Used by permission.” and adding the line “Version 3.0.0”.</li>
+<li>Revised MainWindowController.swift by implementing the NSWindowDelegate protocol’s <code>windowShouldClose(_:)</code> delegate method to terminate the application when the main window is closed even if auxiliary windows remain open, and added NSWindowDelegate to the class declaration.</li>
+<li>Revised Main.storyboard by setting the Window Controller Scene’s Window Controller’s Class to MainWindowController (which changes its sidebar name to “Main Window Controller”), setting its Autosave name to “MainWindowAutosaveName”, and connecting its delegate outlet to Main Window Controller.</li>
+<li>Revised the ViewController.swift template by changing its name to MainContentViewController.swift, changing its class declaration to MainContentViewController, and changing its heading by changing its name to MainContentViewController.</li>
+<li>Revised Main.storyboard by setting the View Controller Scene’s View Controller’s Class to MainContentViewController (which changes its sidebar name to “Main Content View Controller”).</li>
+<li>Confirmed through testing that the frameAutoSaveName mechanism is working both when the application is quit and when the main window is closed after resizing it.</li>
+<li>Saved a snapshot of build version 2.</li>
+</ul>
+<h2>
+<a name="h-2017-03-10-300-build-3-3" class="anchor" href="#h-2017-03-10-300-build-3-3"></a>2017-03-10 (3.0.0 build 3)</h2>
+<p>Create skeleton classes for all of the view controllers needed for a basic working user interface in the main window; namely, the main content view, main split view, master split item view, master tab view and browser, outline and list tab item views, detail split item view, detail tab view, and attributes, actions and notifications tab item view controllers.</p>
+<ul>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 3.</li>
+<li>Revised Info.plist by setting CFBundleVersion (“Bundle version”) to 3.</li>
+<li>Revised MainContentViewController.swift by overriding the NSSeguePerforming protocol’s prepare(for:sender:) method and declaring the detailSplitViewItem dynamic variable, in preparation for adding a binding to the push on/push off disclosure button to enable the user to collapse and reveal the detail split view item.</li>
+<li>Created a new Cocoa Class file MainSplitViewController.swift as a subclass of NSSplitViewController with no XIB file.</li>
+<li>Revised the MainSplitViewController.swift template heading by changing the copyright to “Copyright © 2017 Bill Cheeseman. All rights reserved. Used by permission.” and adding the line “Version 3.0.0”.</li>
+<li>Revised MainSplitViewController.swift by overriding the NSSplitViewDelegate protocol’s splitView(_:additionalEffectiveRectOfDividerAt:) method, to make the divider thicker for easy grabbing.</li>
+<li>Revised MainSplitViewController.swift by overriding viewDidLoad() to set the bottom (detail) split view item’s minimumThickness and maximumThickkness properties, but commented it out when implemented Main.storyboard constraints to accomplish the same thing.</li>
+<li>Created a new Cocoa Class file MasterSplitItemViewController.swift as a subclass of NSViewController with no XIB file.</li>
+<li>Revised the MasterSplitItemViewController.swift template heading by changing the copyright to “Copyright © 2017 Bill Cheeseman. All rights reserved. Used by permission.” and adding the line “Version 3.0.0”.</li>
+<li>Revised MasterSplitItemViewController.swift by overriding the NSSeguePerforming protocol’s prepare(for:sender:) method and declaring the masterTabViewController dynamic variable, in preparation for adding a binding to the segmented control to enable the user to select a master pane tab view item.</li>
+<li>Created a new Cocoa Class file MasterTabViewController.swift as a subclass of NSTabViewController with no XIB file.</li>
+<li>Revised the MasterTabViewController.swift template heading by changing the copyright notice to “Copyright © 2017 Bill Cheeseman. All rights reserved. Used by permission.” and adding the line “Version 3.0.0”.</li>
+<li>Revised MasterTabViewController.swift by overriding NSResponder’s restorableStateKeyPaths() method to enable restoration of the last selected master tab view item at relaunch.</li>
+<li>Created three new Cocoa Class files named “BrowserTabItemViewController.swift”, “OutlineTabItemViewController.swift” and “ListTabItemViewController.swift” as subclasses of NSViewController with no XIB files.</li>
+<li>Revised the BrowserTabItemViewController.swift, OutlineTabItemViewController.swift and ListTabItemViewController.swift template headings by changing the copyright to “Copyright © 2017 Bill Cheeseman. All rights reserved. Used by permission.” and adding the line “Version 3.0.0”.</li>
+<li>Created a new Cocoa Class file DetailSplitItemViewController.swift as a subclass of NSViewController with no XIB file.</li>
+<li>Revised the DetailSplitItemViewController.swift template heading by changing the copyright to “Copyright © 2017 Bill Cheeseman. All rights reserved. Used by permission.” and adding the line “Version 3.0.0”.</li>
+<li>Created a new Cocoa Class file DetailTabViewController.swift as a subclass of NSTabViewController with no XIB file.</li>
+<li>Revised the DetailTabViewController.swift template heading by setting the copyright notice to “Copyright © 2017 Bill Cheeseman. All rights reserved. Used by permission.” and adding the line “Version 3.0.0”.</li>
+<li>Revised DetailTabViewController.swift by overriding NSResponder’s restorableStateKeyPaths() method to enable restoration of the last selected master tab view item at relaunch.</li>
+<li>Created three new Cocoa Class files named “AttributesTabItemViewController.swift”, “ActionsTabItemViewController.swift” and “NotificationsTabItemViewController.swift” as subclasses of NSViewController with no XIB files.</li>
+<li>Revised the AttributesTabItemViewController.swift, ActionsTabItemViewController.swift and NotificationsTabItemViewController.swift template headings by setting the copyright notice to “Copyright © 2017 Bill Cheeseman. All rights reserved. Used by permission.” and adding the line “Version 3.0.0”.</li>
+<li>Confirmed through testing that the application builds and runs, but the new classes cannot be tested until Main.storyboard is revised to make use of them (in build 5).</li>
+<li>Saved a snapshot of build version 3.</li>
+</ul>
+<h2>
+<a name="h-2017-03-10-300-build-4-4" class="anchor" href="#h-2017-03-10-300-build-4-4"></a>2017-03-10 (3.0.0 build 4)</h2>
+<p>Revise Main.storyboard by experimentally setting up the Application’s Main Menu in the Application Scene, and revise Info.plist and create an InfoPlist.strings file to set the displayed application name of the application menu as UI Browser even though the project and bundle name is UIBrowser3.</p>
+<ul>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 4.</li>
+<li>Revised Info.plist by setting CFBundleVersion (“Bundle version”) to 4.</li>
+<li>Revised Main.storyboard by changing the names of the About, Hide, Quit and Help menu items to refer to “UI Browser” instead of “UIBrowser3” in the Application’s Main Menu in the Application Scene.</li>
+<li>Revised Main.storyboard by adding and removing other menus and menu bar items, including several that will be named in code, in the Application’s Main Menu in the Application Scene.</li>
+<li>Revised Info.plist by adding a CFBundleDisplayName (“Bundle display name”) item and setting it to 'UI Browser".</li>
+<li>Created an InfoPlist.strings file with CFBundleName and CFBundleDisplayName items set to “UI Browser”, and CFBundleShortVersionString and NSHumanReadableCopyright items, for localization.</li>
+<li>Confirmed through testing that the application menu is named UI Browser.</li>
+<li>Saved a snapshot of build version 4.</li>
+</ul>
+<h2>
+<a name="h-2017-03-10-300-build-5-5" class="anchor" href="#h-2017-03-10-300-build-5-5"></a>2017-03-10 (3.0.0 build 5)</h2>
+<p>Revise Main.storyboard by adding views for all of the new view controllers to create a basic working user interface in the main window; namely, the main content view, main split view, master split item view, master tab view and browser, outline and list tab item views, detail split item view, detail tab view, and attributes, actions and notifications tab item views, as well as the main window’s buttons. Also revised attributes of the main window.</p>
+<ul>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 5.</li>
+<li>Revised Info.plist by setting CFBundleVersion (“Bundle version”) to 5.</li>
+<li>Set up Main.storyboard for all view controllers created in build 3 by copying the old Main.storyboard file from the 2016 build of UI Browser 3. This has the effect of replacing the experimental changes made to the Main.storyboard’s Application’s Main Menu in the Application Scene in build 4 (they are identical). It also has the effect of adding all of the main window’s buttons (but outlets, actions and supporting methods will be added in later builds).</li>
+<li>Revised Main.storyboard by setting Main Window’s Tabbing Mode to Disallowed to remove the Show Tab Bar menu item from the View menu and related menu items from the Window menu.</li>
+<li>Revised Main.storyboard by setting Main Window’s Spaces to Can Join All Spaces, Expose to Managed and Cycling to Participates in Cycle.</li>
+<li>Changed the copyright notices in all files by adding “2003-”.</li>
+<li>Confirmed through testing that the split view items can be resized by dragging the divider, that the Main.storyboard constraints work correctly when the split view items and main window are resized, that the master and detail tab view items can all be shown by clicking the segment control or tabs, that the Show Tab Bar menu items were successfully hidden, and that the application handles Spaces and Expose changes appropriately. Two problems were found and left for future consideration: (1) Double-clicking the split view divider does not collapse the detail split pane, and (2) dragging the split view divider does not collapse the split view’s detail pane.</li>
+<li>Saved a snapshot of build version 5.</li>
+</ul>
+<p>#<span class="hashtag">#2017-03-11</span> (3.0.0 build 6)<br>
+Set up and populate the main window’s Target pop-up button’s menu and the main menu bar’s Target menu.</p>
+<ul>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 6.</li>
+<li>Revised Info.plist by setting CFBundleVersion (“Bundle version”) to 6.</li>
+<li>Revised MainContentViewController.swift by adding the targetPopUpButton IBOutlet and confirmed that it is connected in Main.storyboard to the main window’s Target pop-up menu, in preparation for providing its content and setting it as the main window’s initialFirstResponder.</li>
+<li>Revised MainContentViewController.swift by overriding its viewWillAppear() method to set the main window’s initialFirstResponder to targetPopUpButton.</li>
+<li>Revised MainContentViewController.swift by implementing the NSMenuDelegate protocol’s <code>menuNeedsUpdate(_:)</code> delegate method to update the main window’s Target pop-up menu by calling AppDelegate’s <code>updateTargetMenu(_:)</code> and declaring that MainContentViewController conforms to the NSMenuDelegate protocol, and confirmed that the main window’s targetPopUpButton’s menu outlet is connected to its Menu and Menu’s delegate outlet is connected to MainContentViewController.</li>
+<li>Revised AppDelegate.swift by declaring appDelegate as a type variable, and revised the <code>applicationDidFinishLaunching(_:)</code> template delegate method to set its value to self, to make the appDelegate available to any other window or view controller.</li>
+<li>Revised AppDelegate.swift by declaring targetMenu as an IBOutlet for use in <code>menuNeedsUpdate(_:)</code>, and confirmed that is is connected to the main menu bar’s Target menu in Main.storyboard.</li>
+<li>Revised AppDelegate.swift by implementing the NSMenuDelegate protocol’s <code>menuNeedsUpdate(_:)</code> delegate method to update the main menu bar’s Target menu by calling AppDelegate’s <code>updateTargetMenu(_:)</code>, declaring that AppDelegate conforms to the NSMenuDelegate protocol, and confirmed that the main menu bar’s Target menu item’s Target Menu’s delegate outlet is connected to AppDelegate.swift.</li>
+<li>Revised MainContentViewController.swift by declaring controller as a type variable, and revised viewDidLoad() to set its value to self, to make the main content view controller available to any other window or view controller.</li>
+<li>Created a new Swift File Defines.swift to hold constants to be used in AppDelegate’s <code>updateTargetMenu(_:)</code> method.</li>
+<li>Revised the Defines.swift template heading by setting the copyright notice to “Copyright © 2003-2017 Bill Cheeseman. All rights reserved. Used by permission.”, adding the line “Version 3.0.0” and deleting the import Foundation statement.</li>
+<li>Revised Defines.swift by defining (in the order they are called in <code>updateTargetMenu(_:)</code>) the constants CHOOSE_NO_TARGET_TITLE, CHOOSE_ANY_TARGET_TITLE, RUNNING_APP_KEY, RUNNING_APP_NAME_KEY, NO_TARGET_MENU_ITEM_TAG, DISPLAYS_BACKGROUND_APPS_DEFAULTS_KEY, and DISPLAYS_BACKGROUND_APPS_SEPARATELY_DEFAULTS_KEY.</li>
+<li>Revised MainContentViewController.swift by adding stubs for the <code>chooseNoTarget(_:)</code>, <code>chooseAnyTarget(_:)</code> and <code>chooseRunningTarget(_:)</code> action methods.</li>
+<li>Revised MainContentViewController.swift by adding the selectedTarget instance variable.</li>
+<li>Revised MainContentViewController.swift by adding computed instance property processTrusted to be used to enable and disable controls and setting it to true temporarily. (It should be set to PFUIElement.isProcessTrustedWithOptions(nil) once PFAssistiveFramework4 is written.)</li>
+<li>Revised AppDelegate.swift by implementing <code>updateTargetMenu(_:)</code> to update the main menu bar’s Target menu or the main window’s Target pop-up button when the user opens it.</li>
+<li>Confirmed that the main menu bar’s Target menu’s Auto Enables Items setting and the Target popup button’s menu’s Auto Enables Items setting in Main.storyboard are turned off so manual enabling of menu items will work.</li>
+<li>Confirmed through testing that the main window’s Target pop-up button’s menu and the main menu bar’s Target menu are populated with its fixed menu items and the running application names and open when clicked.</li>
+<li>Saved a snapshot of build version 6.</li>
+</ul>
+<p>#<span class="hashtag">#2017-03-11</span> (3.0.0 build 7)<br>
+Add functionality to the main window’s Target pop-up button’s menu and the main menu bar’s Target menu.</p>
+<ul>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 7.</li>
+<li>Revised Info.plist by setting CFBundleVersion (“Bundle version”) to 7.</li>
+<li>Revised MainWindowController.swift by adding updateWindowTitle(with:). to set the window title and the menu bar Window menu’s window menu item</li>
+<li>Revised MainWindowController.swift’s <code>windowDidLoad()</code> by calling updateWindowTitle(with:) to set the window title and the menu bar Window menu’s window menu item to CHOOSE_NO_TARGET_TITLE at launch.</li>
+<li>Revised MainContentViewController.swift’s viewDidLoad() to set the target popup button’s title at launch.</li>
+<li>Revised MainWindowController.swift by declaring controller as a type variable, and revised windowDidLoad() to set its value to self, to make the main window controller available to any other window or view controller.</li>
+<li>Revised Defines.swift by adding <code>IS_FINISHED_LAUNCHING_CONTEXT_VALUE</code>, <code>IS_FINISHED_LAUNCHING_KEYPATH</code>, <code>IS_TERMINATED_CONTEXT_VALUE</code> and <code>IS_TERMINATED_KEYPATH</code>.</li>
+<li>Revised MainContentViewController.swift by adding the launchedTarget, isFinishedLaunchingContext and isTerminatedContext instance variables.</li>
+<li>Revised MainContentViewController.swift by adding stubs for <code>updateTarget(_:)</code> and <code>clearTarget()</code> to update and clear global target application information, <code>updateTargetDisplay()</code> and <code>clearTargetDisplay()</code> to update and clear the display of information about the target application, and <code>updateTargetPopUpButton()</code> and clearTargetPopUpButton() to update the target popup button’s title, all after the user chooses a new target application.</li>
+<li>Revised MainContentViewController.swift by adding the <code>observeValue(forKeyPath:ofObject:change:context:)</code> KVO observing method.</li>
+<li>Confirmed through testing that the window title and the menu bar Window menu’s window menu item are correctly set to <code>CHOOSE_NO_TARGET_TITLE</code> at launch. The remaining functionality of the main window’s Target pop-up button’s menu and the main menu bar’s Target menu cannot be tested until the data model is created in build 9.</li>
+<li>Saved a snapshot of build version 7.</li>
+</ul>
+<p>#<span class="hashtag">#2017-03-12</span> (3.0.0 build 8)<br>
+Set up the main content view’s remaining controls.</p>
+<ul>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 8.</li>
+<li>Revised Info.plist by setting CFBundleVersion (“Bundle version”) to 8.</li>
+<li>Revised MainContentViewController by adding IBOutlets activateButton and accessCheckbox and confirmed that they are connected in Main.storyboard.</li>
+<li>Revised MainContentViewController.swift by adding validateControls().</li>
+<li>Revised MainContentViewController.swift by adding class initialize() method to register user defaults values.</li>
+<li>Revised Defines.swift by defining the constants <code>CHOOSING_TARGET_ACTIVATES_APPLICATION_DEFAULTS_KEY</code> and <code>TERMINOLOGY_DEFAULTS_KEY</code>.</li>
+<li>Revised MainContentViewController.swift by adding deinit method to unregister KVO.</li>
+<li>Revised MainContentViewController.swift by adding a stub for <code>validateMenuItem(_:)</code>.</li>
+<li>Revised MainContentViewController.swift by adding a stub for <code>updateTarget(withTimer:)</code>.</li>
+<li>Revised Defines.swift by defining the constants <code>SELECT_ELEMENT_TIMER_INTERVAL</code> and <code>SELECT_ELEMENT_TIMER_DURATION</code>.</li>
+<li>Revised MainContentViewController.swift by adding sheetForApplicationFailedToLaunch and <code>sheetForApplicationUIElementNotCreated(_:)</code>.</li>
+<li>Confirmed through testing that the new methods and stub methods cause no problems. The remaining functionality of the main window’s Target pop-up button’s menu and the main menu bar’s Target menu cannot be tested until the data model is created in build 9.</li>
+<li>Saved a snapshot of build version 8.</li>
+</ul>
+<h2>
+<a name="h-2017-03-12-300-build-9-6" class="anchor" href="#h-2017-03-12-300-build-9-6"></a>2017-03-12 (3.0.0 build 9)</h2>
+<p>Set up the data model and its display in the browser view.</p>
+<ul>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 9.</li>
+<li>Revised Info.plist by setting CFBundleVersion (“Bundle version”) to 9.</li>
+<li>Created a new Cocoa Class file ElementDataSource.swift as a subclass of NSObject with no XIB file.</li>
+<li>Revised the ElementDataSource.swift template heading by setting the copyright notice to “Copyright © 2003-2017 Bill Cheeseman. All rights reserved. Used by permission.”, adding the line “Version 3.0.0”</li>
+<li>Revised ElementDataSource.swift by copying the entire contents of ElementDataSource.swift from the 2016 build of UI Browser 3, and making Swift 3 conversions requested by Xcode.</li>
+<li>Revised MainContentViewController’s viewDidLoad() method by adding temporary code to test PFAssistiveFramework4 builds 3 and 4.</li>
+<li>Moved development to macOS Sierra 10.12.4, Xcode 8.3 and Swift version 3.1.</li>
+</ul>
+<h2>
+<a name="h-2017-08-21-300-build-10-7" class="anchor" href="#h-2017-08-21-300-build-10-7"></a>2017-08-21 (3.0.0 build 10)</h2>
+<p>Prepare to convert to Swift 4.</p>
+<ul>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 10.</li>
+<li>Changed the project’s <code>MACOSX_DEPLOYMENT_TARGET</code> (“macOS Deployment Target”) build setting to 10.13.</li>
+<li>Revised Info.plist by setting CFBundleVersion (“Bundle version”) to 10.</li>
+<li>Moved development to macOS High Sierra 10.13.6 dev beta 7 and Xcode 9 beta 6.</li>
+<li>Updated to recommended Xcode build settings.</li>
+<li>Successfully built in Swift 3.2, with warnings.</li>
+<li>Successfully ran in Swift 3.2.</li>
+<li>Moved initial user defaults registration from MainContentViewController’s <code>initialize()</code> function to AppDelegate’s <code>applicationWillFinishLaunching(_:)</code> function in response to warning that initialize() is not guaranteed to run and will be deprecated in future.</li>
+<li>Fixed remaining warnings in MainContentViewController’s <code>viewDidLoad()</code>.</li>
+<li>Added missing QSWShowDetailSplitItemTemplate image to Assets.xcassets.</li>
+<li>Commented out test code in MainContentViewController’s <code>viewDidLoad()</code> to avoid crash.</li>
+<li>Saved a snapshot of build version 10.</li>
+</ul>
+<h2>
+<a name="h-2017-08-23-300-build-11-8" class="anchor" href="#h-2017-08-23-300-build-11-8"></a>2017-08-23 (3.0.0 build 11)</h2>
+<p>Convert to Swift 4.</p>
+<ul>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 11.</li>
+<li>Changed the project’s macOS Deployment Target to 10.13.</li>
+<li>Revised ElementDataSource’s <code>updateDataSourceForElementAtLevel(_:forIndex:)</code> function by casting currentItem[“element”] as! AccessibilityElement in order to get its AXChildren property without a warning.</li>
+<li>Changed Xcode project format to Xcode 8.0-compatible.</li>
+<li>Fixed “No such module ‘PFAssistiveFramework4 module’” compiler error by temporarily moving AccessibilityElement.swift from the PFAssistiveFramework4 project to the UIBrowser3 project, converting to the new build system (File &gt; Workspace Settings), converting only the UIBrowser3 project, and turning off conversion of both test targets. But I was later able to convert the test targets one at a time separately, which required no change because they are empty.</li>
+<li>Ran converter; it reported a few source changes needed, and made them.</li>
+<li>Completed migration for <span class="mention">@objc</span> inference minimized by turning off deprecated <span class="mention">@obj</span> inference.</li>
+<li>Changed Xcode project format to Xcode 8.0-compatible.</li>
+<li>Moved AccessibilityElement.swift back to the PFAssistiveFramework4 project, and resumed using the UIBrowser3 workspace to develop, build and run UI Browser.</li>
+<li>Successfully built and ran in Swift 4.</li>
+<li>Saved a snapshot of build version 11.</li>
+</ul>
+<h2>
+<a name="h-2017-08-29-300-build-12-9" class="anchor" href="#h-2017-08-29-300-build-12-9"></a>2017-08-29 (3.0.0 build 12)</h2>
+<p>Revise flow of control for choosing and launching a target application.</p>
+<ul>
+<li>Moved development to macOS High Sierra 10.13 dev beta 8.</li>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 12.</li>
+<li>Revised MainWindowController’s updateWindowTitle(with:) method.</li>
+<li>Implemented MainContentViewController’s <code>chooseRunningTarget(_:)</code> method.</li>
+<li>Renamed MainContentViewController’s selectedTarget property to currentTarget.</li>
+<li>Created extension on MainTargetViewController in TargetMenuExtension.swift, and moved the <code>chooseNoTarget(_:)</code>, <code>chooseAnyTarget(_:)</code>, and <code>chooseRunningTarget(_:)</code> action methods into it from MainTargetViewController.swift, and moved the <code>updateTargetMenu(_:)</code> method into it from AppDelegate.swift.</li>
+<li>Renamed MainContentViewController’s <code>updateTarget(_:)</code> method to <code>updateApplication(for:)</code>, and broke most of its code out into new method <code>updateApplicationData()</code>.</li>
+<li>Renamed MainContentViewController’s <code>updateTargetDisplay()</code> method to updateApplicationDisplay().</li>
+<li>Implemented MainContentViewController’s <code>updateApplication(for:withTimer:)</code> method, and moved it into <code>observeValue(forKeyPath:of:change:context:)</code> as a closure.</li>
+<li>Added MainContentViewController’s <code>validateChosenTarget(_:)</code> method to consolidate KVO observer management and test whether a new target that has finished launching has made access available.</li>
+<li>Added MainContentViewController’s <code>menuDidClose(_:)</code> NSMenuDelegate delegate method to update the Target pop-up button’s title if the user opened its menu and then dismissed it without choosing an item.</li>
+<li>Revised the MainContentViewController’s <code>sheetForApplicationFailedToLaunch(name:)</code> and <code>sheetForApplicationUIElementNotCreated(name:)</code> methods.</li>
+<li>Added TargetMenuExtension’s <code>updateTargetPopUpButton()</code> method to consolidate Target pop-up button title management.</li>
+<li>Implemented TargetMenuExtension’s <code>chooseNoTarget(_:)</code> action method.</li>
+<li>Successfully built and ran in Swift 4.</li>
+<li>Saved a snapshot of build version 12.</li>
+</ul>
+<h2>
+<a name="h-2017-09-06-300-build-13-10" class="anchor" href="#h-2017-09-06-300-build-13-10"></a>2017-09-06 (3.0.0 build 13)</h2>
+<p>Clean up handling of No Target menu item.</p>
+<ul>
+<li>Moved development to macOS High Sierra 10.13 dev beta 9.</li>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 13.</li>
+<li>Revised TargetMenuExtension’s <code>chooseNoTarget(_:)</code> action method to call <code>updateApplication(for:)</code> with a nil target parameter to clear UI Browser’s data and display.</li>
+<li>Revised MainContentViewController’s updateApplication(for:) to handle the nil target passed in from the <code>chooseNoTarget(_:)</code> action method by clearing UI Browser’s data and display.</li>
+<li>Revised MainWindowController’s <code>updateWindowTitle(for:)</code> to take an NSRunningApplication parameter.</li>
+<li>Successfully built and ran in Swift 4.</li>
+<li>Saved a snapshot of build version 13.</li>
+</ul>
+<h2>
+<a name="h-2017-09-8-300-build-14-11" class="anchor" href="#h-2017-09-8-300-build-14-11"></a>2017-09-8 (3.0.0 build 14)</h2>
+<p>Implement Swift 3 KVO (removed in build 16).</p>
+<ul>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 14.</li>
+<li>Revised Defines.h and MainContentViewController to remove the KVO value constants because KVO only uses the addresses.</li>
+<li>Revised Defines.h to remove the KVO key constants, and revised MainContentViewController and TargetMenuExtensions to use the <span class="hashtag">#keyPath</span>() expression instead.</li>
+<li>Revised MainContentViewController and TargetMenuExtensions to add the context: parameter to all <code>removeObserver()</code> calls.</li>
+<li>Successfully built and ran in Swift 4.</li>
+<li>Saved a snapshot of build version 14.</li>
+</ul>
+<h2>
+<a name="h-2017-09-8-300-build-15-12" class="anchor" href="#h-2017-09-8-300-build-15-12"></a>2017-09-8 (3.0.0 build 15)</h2>
+<p>Implement Swift 4 KVO.</p>
+<ul>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 15.</li>
+<li>Implemented Swift 4 KVO by adding observe() method calls in TargetMenuExtension’s <code>chooseAnyTarget(_:)</code> for the isFinishedLaunching key path and in MainContentViewController’s <code>validateChosenTarget(_:)</code> for the isTerminated key path, and moving the two context blocks in the observeValue(forKeyPath:of:change:context:) Swift 3 KVO observer method into the two observe() methods’ handler blocks.</li>
+<li>Added tests for <span class="hashtag">#available</span>(macOS 10.13, *) to call the observe() Swift 4 KVO methods when UI Browser is running on macOS High Sierra 10.13 or newer, and to call the <code>addObserver()</code> and <code>removeObserver()</code> Swift 3 KVO methods otherwise.</li>
+<li>Revised MainContentViewController’s <code>validateChosenTarget()</code> method and changed it to <code>validateTarget()</code>.</li>
+<li>Successfully built and ran in Swift 4.</li>
+<li>Saved a snapshot of build version 15.</li>
+</ul>
+<h2>
+<a name="h-2017-09-10-300-build-16-13" class="anchor" href="#h-2017-09-10-300-build-16-13"></a>2017-09-10 (3.0.0 build 16)</h2>
+<p>Change deployment target to OS X Yosemite 10.10, and remove all Swift 3 KVO code.</p>
+<ul>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 16.</li>
+<li>Changed the project’s <code>MACOSX_DEPLOYMENT_TARGET</code> (“macOS Deployment Target”) build setting to 10.10.</li>
+<li>Revised TargetMenuExtension’s <code>chooseAnyTarget(_:)</code> action method to use repeating timer block only if <span class="hashtag">#available</span>(OSX 10.12, *) and otherwise post an alert.</li>
+<li>Removed all tests for if <span class="hashtag">#available</span>(OSX 10.13, *), which should have been tests for <span class="hashtag">#if</span> swift(&gt;=4.0) to limit use of new Swift 4 KVO observer method to builds performed with Swift 4, and removed all of the Swift 3 branches and the <code>observeValue(forKeyPath:of:change:context:)</code> Swift 3 KVO observer method, because we will never again build under Swift 3.</li>
+<li>Revised TargetMenuExtension’s <code>UpdateTargetMenu(_:)</code> to break running background applications array into separate arrays for LSUIElement and LSBackgroundApplication applications, in anticipation of altering the preferences settings to eliminate or separate handling of the latter.</li>
+<li>Successfully built and ran in Swift 4.</li>
+<li>Saved a snapshot of build version 16.</li>
+</ul>
+<h2>
+<a name="h-2017-09-12-300-build-17-14" class="anchor" href="#h-2017-09-12-300-build-17-14"></a>2017-09-12 (3.0.0 build 17)</h2>
+<p>Clean up Target menu handling.</p>
+<ul>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 17.</li>
+<li>Modified all type properties allowing outside references to self by renaming them “shared”.</li>
+<li>Revised TargetMenuExtension’s <code>chooseAnyTarget(_:)</code> and <code>chooseRunningTarget(_:)</code> action methods to do nothing if the chosen target is already the current target.</li>
+<li>Revised TargetMenuExtensions by adding Markup documentation.</li>
+<li>Moved development to macOS High Sierra 10.13 GM Candidate 1 and Xcode 9 GM.</li>
+<li>Renamed MainContentViewController’s <code>validateTarget(_:)</code> method to <code>validate(_:)</code>, moved it to TargetMenuExtension, and revised it.</li>
+<li>Changed all references to NSRunningApplication’s localizedName to NSFileManager’s displayName per Apple Technical Q&amp;A QA1544, including in MainWindowController’s <code>updateWindowTitle(for:)</code>
+</li>
+<li>Implemented MainContentViewController’s <code>displayNameForTarget()</code> method using code extracted from <code>updatedWindowTitle()</code>, and called the new method in several places to save space and maintain consistency.</li>
+<li>Implemented MainContentViewController’s <code>displayName(for:)</code> method for more general use.</li>
+<li>Revised MainWindowController’s updateWindowTitle() by removing its parameter for consistency and improving efficiency.</li>
+<li>Revised MainContentViewController’s viewDidLoad() method by registering it to observe the willPopUpNotification notification instead of implementing the menuNeedsUpdate(_<img src="https://forum.latenightsw.com/images/emoji/apple/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> delegate method.</li>
+<li>Removed MainContentViewController’s designation as NSMenuDelegate and removed its <code>menuNeedsUpdate(_:)</code> and <code>menuDidClose(_:)</code> delegate methods because no longer needed.</li>
+<li>Implemented MainContentViewController’s <code>targetPopUpButtonWillPopUp(_:)</code> notification method and moved the last block of <code>updateTargetMenu(_:)</code> into it, with modifications modeled on UI Browser 2 code.</li>
+<li>Revised AppDelegate’s <code>MenuNeedsUpdate(_:)</code> delegate method and moved the last block of TargetMenuExtensions’s <code>updateTargetMenu(_:)</code> into it, with modifications modeled on UI Browser 2 code.</li>
+<li>Successfully built and ran in Swift 4.</li>
+<li>Saved a snapshot of build version 17.</li>
+</ul>
+<h2>
+<a name="h-2017-09-20-300-build-18-15" class="anchor" href="#h-2017-09-20-300-build-18-15"></a>2017-09-20 (3.0.0 build 18)</h2>
+<p>Complete Target menu handling.</p>
+<ul>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 18.</li>
+<li>Moved development to Xcode 9 final (build version unchanged from GM) and Swift 4.0 final.</li>
+<li>Revised TargetMenuExtension’s <code>chooseAnyTarget(_:)</code> action method extensively.</li>
+<li>Implemented TargetMenuExtension’s <code>targetValidationTimer(_:)</code> method so it could be scheduled in two places in <code>chooseAnyTarget(_:)</code>.</li>
+<li>Renamed launchedTarget property to launchingTarget.</li>
+<li>Added typealias RunningInfo and used it throughout TargetMenuExtension.</li>
+<li>Implemented TargetMenuExtension’s <code>chooseSystemwideTarget(_:)</code> action method and the isSystemwideTarget variable to identify when a nil currentTarget signifies that the systemwide target instead of no target is chosen, and revised methods throughout to use it.</li>
+<li>Renamed <code>validate(_:)</code> method to <code>validate(target:)</code>.</li>
+<li>Completed markup documentation in TargetMenuExtension.</li>
+<li>Successfully built and ran in Swift 4.</li>
+<li>Saved a snapshot of build version 18.</li>
+</ul>
+<h2>
+<a name="h-2017-09-25-300-build-19-16" class="anchor" href="#h-2017-09-25-300-build-19-16"></a>2017-09-25 (3.0.0 build 19)</h2>
+<p>Start setting up ElementDataSource and BrowserTabItemViewController.</p>
+<ul>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 19.</li>
+<li>Moved development to macOS High Sierra 10.13.0 final.</li>
+<li>Revised MainContentViewController’s <code>updateApplicationData()</code> and updateApplicationDisplay().</li>
+<li>Revised MasterTabViewController by adding “shared” type property allowing outside references to self and revised <code>viewDidLoad()</code> to set it.</li>
+<li>Revised MasterSplitItemViewController by adding “shared” type property allowing outside references to self and revised <code>viewDidLoad()</code> to set it.</li>
+<li>Revised Defines.swift by adding MASTER_TAB_VIEW_ITEM_DEFAULTS_KEY and the MasterTabViewItemIndex enum.</li>
+<li>Revised AppDelegate’s <code>applicationWillFinishLaunching(_:)</code> delegate method to set MASTER_TAB_VIEW_ITEM_DEFAULTS_KEY to MasterTabViewItemIndex.Browser.rawValue at first launch.</li>
+<li>Revised MasterSplitItemViewController by adding <code>updateDisplay()</code> method to update the master split item’s display when the user chooses a new target.</li>
+<li>Revised MainContentViewController’s <code>updateApplicationDisplay()</code> to call MasterSplitItemViewController’s <code>updateDisplay()</code> method when the user chooses a new target.</li>
+<li>Revised <code>BrowserTabItemViewController</code> to implement NSBrowser datasource item-based protocol, and declared it to conform to NSBrowserDelegate.</li>
+<li>Successfully built in Swift 4, but it won’t yet successfully display the contents of the browser view.</li>
+<li>Saved a snapshot of build version 19.</li>
+</ul>
+<h2>
+<a name="h-2017-10-10-300-build-20-17" class="anchor" href="#h-2017-10-10-300-build-20-17"></a>2017-10-10 (3.0.0 build 20)</h2>
+<p>Complete ElementDataSource and BrowserTabItemViewController for an application target.</p>
+<ul>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 20.</li>
+<li>Revise ElementDataSource by changing all uses of type AnyObject to Any to conform to Swift 3 and 4 usage in NSBrowserDelegate.</li>
+<li>Revised BrowserTabItemViewController by implementing the <code>selectElement(_:)</code> action method and connected it to BrowserTabItemViewController’s first responder in Main.storyboard.</li>
+<li>Successfully built and ran in Swift 4.</li>
+<li>Saved a snapshot of build version 20.</li>
+</ul>
+<p>#<span class="hashtag">#2017-10-12</span> (3.0.0 build 21)<br>
+Improve efficiency of choosing and validating a new target.</p>
+<ul>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 21.</li>
+<li>Revised TargetMenuExtension’s <code>validate(target:)</code> method to return the application AccessibilityElement object that was created to validate the proposed target, instead of discarding it, so it can be used in <code>updateApplication(for:)</code> to update ElementDataSource instead of recreating it; and renamed the method validatedTargetElement(for:).</li>
+<li>Revised MainContentViewController’s <code>updateApplication(for:)</code> to take the AccessibilityElement returned by <code>validatedTargetElement(for:)</code> and pass it to <code>updateApplicationData()</code> to update ElementDataSource; and renamed the method <code>updateApplication(forTarget:withElement:)</code>.</li>
+<li>Revised MainContentViewController’s <code>updateApplicationData()</code> to take the AccessibilityElement returned by <code>validatedTargetElement(for:)</code> and use it to update ElementDataSource; and renamed the method <code>updateApplicationData(withTargetElement:)</code>.</li>
+<li>Revised <code>chooseNoTarget(_:)</code> and <code>chooseSystemWideTarget(_:)</code> action methods so they do not call validatedTargetElement(for:), and moved the code to clean out the old currentTarget to MainContentViewController’s <code>updateApplication(forTarget:withElement:)</code>.</li>
+<li>Revised <code>validatedTargetElement(for:)</code> so the parameter value is not optional, removed the nil branch, and added the code from the <code>chooseNoTarget(_:)</code> and <code>chooseSystemWideTarget(_:)</code> action methods to clean out the old currentTarget.</li>
+<li>Revised all of the TargetMenuExtension’s action method signatures to specify NSMenuItem specifically as the sender type.</li>
+<li>Revised the <code>chooseAnyTarget(_:)</code> action method by removing the <code>isRunning(_:)</code> nested function and replacing it with the NSRunningApplication array’s <code>contains(where:)</code> method, instead.</li>
+<li>Revised the names of methods and properties throughout to comply with Apple’s API Design Guidelines for Swift 3 and 4.</li>
+<li>Successfully built and ran in Swift 4.</li>
+<li>Saved a snapshot of build version 21.</li>
+</ul>
+<h2>
+<a name="h-2017-10-15-300-build-22-18" class="anchor" href="#h-2017-10-15-300-build-22-18"></a>2017-10-15 (3.0.0 build 22)</h2>
+<p>Complete ElementDataSource and BrowserTabItemViewController for no target.</p>
+<ul>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 22.</li>
+<li>Moved development to Xcode 9.0.1.</li>
+<li>Removed the isProcessTrusted global property and code that set it, and replaced all references to it with direct calls to the PFAssistiveFramework4 <code>isProcessTrusted()</code> method.</li>
+<li>Implemented the NSBrowser+PFSmallBrowserAdditions Objective-C category file.</li>
+<li>Revised BrowserTabItemViewController’s <code>viewDidLoad()</code> method to call methods implemented in the NSBrowser+PFSmallBrowserAdditions Objective-C category.</li>
+<li>Implemented BrowserTabItemViewController’s <code>clearView()</code> method.</li>
+<li>Revised MasterSplitItemViewController by implementing <code>clearView()</code> to call BrowserTabItemViewController’s <code>clearView()</code>.</li>
+<li>Revised MainContentViewController <code>updateView()</code> to call MasterSplitItemViewController’s <code>clearView()</code>.</li>
+<li>Revised several methods to use optional parameters.</li>
+<li>Revised TargetMenuExtension’s <code>validatedTargetElement(for:)</code> method by limiting it to the validation code and moving other code to MainContentViewController’s <code>updateApplication(for:using:)</code>, and by adding the role == NSAccessibilityRole.application.rawValue test.</li>
+<li>Successfully built and ran in Swift 4.</li>
+<li>Saved a snapshot of build version 22.</li>
+</ul>
+<h2>
+<a name="h-2017-10-22-300-build-23-19" class="anchor" href="#h-2017-10-22-300-build-23-19"></a>2017-10-22 (3.0.0 build 23)</h2>
+<p>Implement system-wide element data and display.</p>
+<ul>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 23.</li>
+<li>Changed the currentTarget, launchingTarget and currentDataSource properties to runningApplicationTarget, launchingApplicationTarget and currentElementData throughout.</li>
+<li>Removed the isSystemWideTarget property.</li>
+<li>Revised ElementDatasource by adding the <code>updateDataSourceForSystemWideElement(element:)</code> method.</li>
+<li>Revised <code>MainContentViewcontroller.displayName(for:)</code> by adding an assertionFailure() call, returning empty string if error, and making returned string nonoptional.</li>
+<li>Revised <code>MainContentViewController.displayNameForTarget()</code> by changing its name to <code>displayNameForTargetApplication()</code>, adding an <code>assert()</code> call if runningApplicationTarget is nil, calling <code>displayName(for:)</code> and returning empty string if error, and making returned string nonoptional.</li>
+<li>Revised <code>MainWindowController.updateWindowTitle()</code> to handle SystemWide Target.</li>
+<li>Revised TargetMenuExtension’s <code>MainContentViewController.targetPopUpButtonWillPopUp(_:)</code> to handle SystemWide Target.</li>
+<li>Revised <code>AppDelegate.menuNeedsUpdate(_:)</code> to handle SystemWide Target.</li>
+<li>Revised TargetMenuExtension’s <code>MainContentViewController.updateTargetPopUpButton()</code> by changing its name to <code>UpdateTargetPopUpButtonTitle()</code>, and to handle SystemWide Target.</li>
+<li>Successfully built and ran in Swift 4.</li>
+<li>Saved a snapshot of build version 23.</li>
+</ul>
+<h2>
+<a name="h-2017-10-25-300-build-24-20" class="anchor" href="#h-2017-10-25-300-build-24-20"></a>2017-10-25 (3.0.0 build 24)</h2>
+<p>Adopt PFAssistiveFramework4 AccessibilityElement changes.</p>
+<ul>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 24.</li>
+<li>Adopted PFAssistiveFramework4 build 11 changes to AccessibilityElement.</li>
+<li>Revised TargetMenuExtension’s <code>validatedTargetElement(for:)</code> to call new <code>AccessibilityElement.applicationElement(forProcessIdentifier:withDelegate:)</code> class method.</li>
+<li>Revised TargetMenuExtension’s <code>chooseSystemWideTarget(_:)</code> action method to call new <code>systemWidwElement(withDelegate:)</code> class method.</li>
+<li>Successfully built and ran in Swift 4.</li>
+<li>Saved a snapshot of build version 24.</li>
+</ul>
+<h2>
+<a name="h-2017-10-25-300-build-25-21" class="anchor" href="#h-2017-10-25-300-build-25-21"></a>2017-10-25 (3.0.0 build 25)</h2>
+<p>Simplify and clarify ElementDataSource code.</p>
+<ul>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 25.</li>
+<li>Made terminology changes throughout.</li>
+<li>Revised BrowserTabItemViewController by adding Markup documentation.</li>
+<li>Revised <code>MainContentViewController.updateView()</code> to call <code>MasterSplitItemViewController.clearView()</code> for running application targets as well as No Target and SystemWide Target, to work around NSBrowser bug relating to column titles.</li>
+<li>Declared ElementDataSource’s typealias ElementNodeInfo in order to better hide the actual type.</li>
+<li>Renamed ElementDataSource.currentItem to currentNode.</li>
+<li>Renamed the ElementDataSource.elementArray property to elementTree.</li>
+<li>Moved creation of elementTree and currentNode into init().</li>
+<li>Renamed methods to <code>nodeAt(level:index:)</code>, <code>node(atIndexPath:)</code>, <code>childNode(ofParentNode:atChildIndex:)</code>, <code>nodeCount(atLevel:)</code>, <code>element(ofNode:)</code>, <code>childCount(ofNode:)</code>, <code>indexPath(ofNode:)</code>, <code>briefDescription(ofNode:)</code>, .</li>
+<li>Revised the <code>BrowserTabItemViewController.browser(_:child:ofItem:)</code> NSBrowser datasource method to assert in debug mode that the type of item is ElementNodeInfo.</li>
+<li>Changed ElementDataSource uses of item to node.</li>
+<li>Removed ElementDataSource uses of AnyObject.</li>
+<li>Added type designations for ElementNodeInfo.</li>
+<li>Successfully built and ran in Swift 4.</li>
+<li>Saved a snapshot of build version 25.</li>
+</ul>
+<h2>
+<a name="h-2017-10-30-300-build-26-22" class="anchor" href="#h-2017-10-30-300-build-26-22"></a>2017-10-30 (3.0.0 build 26)</h2>
+<p>Improve ElementDataSource code, change its terminology and write its markup documentation.</p>
+<ul>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 26.</li>
+<li>Moved development to macOS High Sierra 10.13.1 and Xcode 9.1.</li>
+<li>Revised ElementDataSource by defining ElementNodeKey enumeration for element node dictionary keys.</li>
+<li>Renamed ElementDataSource class to ElementDataModel.</li>
+<li>Revised terminology throughout to refer to the model as the “data model” and “datasource” methods to “data source” methods.</li>
+<li>Revised ElementDataModel by adding Markup documentation.</li>
+<li>Revised ElementDataModel by renaming many methods to comply with Apple style guidelines.</li>
+<li>Revised Defines.h by chaning the Terminology enumeration cases to lowercase.</li>
+<li>Revised <code>ElementDataModel.updateDataModel(forApplicationElement:)</code> by moving inline code into the <code>appleScriptDescriptions(forElement:)</code> nested method.</li>
+<li>Revised <code>ElementDataModel.updateDataModelForCurrentElementAt(level:index:)</code> by moving inline code into the <code>appleScriptNameAndIndex(forElement:elementIndex:roleIndex:)</code> nested method.</li>
+<li>Revised ElementDataModel’s updateDataModel… methods by removing multiple local variable declarations in favor of creating a node dictionary using inline method calls.</li>
+<li>Revised ElementDataModel’s appleScriptClassNames variable, improved its error handling, and added the <code>sheetForRolesAppleScriptFileFailedToLoad()</code> method.</li>
+<li>Pruned the list of AppleScript roles in RoleAppleScript.strings to match the System Events scripting dictionary.</li>
+<li>Successfully built and ran in Swift 4.</li>
+<li>Saved a snapshot of build version 26.</li>
+</ul>
+<h2>
+<a name="h-2017-11-05-300-build-27-23" class="anchor" href="#h-2017-11-05-300-build-27-23"></a>2017-11-05 (3.0.0 build 27)</h2>
+<p>Add support for the system-wide element in ElementDataSource.</p>
+<ul>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 27.</li>
+<li>Replaced RolesAppleScript.strings file with AppleScriptRoles.plist file.</li>
+<li>Revised <code>ElementDataModel.updateDataModel(forSystemWideElement:)</code> by moving inline code into the <code>appleScriptDescriptions(forElement:)</code> nested method.</li>
+<li>Revised <code>MainContentViewController.updateView()</code> to call <code>MasterSplitItemViewController.shared.updateView()</code> when the system-wide element is chosen as well as when an application element is chosen as the target.</li>
+<li>Successfully built and ran in Swift 4.</li>
+<li>Saved a snapshot of build version 27.</li>
+</ul>
+<h2>
+<a name="h-2017-11-06-300-build-28-24" class="anchor" href="#h-2017-11-06-300-build-28-24"></a>2017-11-06 (3.0.0 build 28)</h2>
+<p>Implement the Activate button’s activateTarget(_<img src="https://forum.latenightsw.com/images/emoji/apple/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> action method.</p>
+<ul>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 28.</li>
+<li>Created extension on MainContentViewController in ActivateButtonExtension.swift.</li>
+<li>Implemented ActivateButtonExtension’s <code>activateTarget(_:)</code> action method.</li>
+<li>Connected activateButton outlet to First Responder’s <code>activateTarget(_:)</code> action method in Main.storyboard.</li>
+<li>Successfully built and ran in Swift 4.</li>
+<li>Saved a snapshot of build version 28.</li>
+</ul>
+<h2>
+<a name="h-2017-11-06-300-build-29-25" class="anchor" href="#h-2017-11-06-300-build-29-25"></a>2017-11-06 (3.0.0 build 29)</h2>
+<p>Import the PFAccessibilityAuthorizer2 framework and use it in the Accessibility checkbox’s action method and elsewhere.</p>
+<ul>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 29.</li>
+<li>Created extension on MainTargetViewController in AccessibilityCheckboxExtension.swift.</li>
+<li>Implemented AccessibilityCheckboxExtension’s <code>toggleAccessibility(_:)</code> action method.</li>
+<li>Connected accessibilityCheckbox outlet to First Responder’s <code>toggleAccessibility(_:)</code> action method in Main.storyboard.</li>
+<li>Added the PFAccessibilityAuthorizer2 project to the UIBrowser3 workspace by dragging the project file into the root level of the workspace navigator.</li>
+<li>Designated the PFAccessibilityAuthorizer2 project to the UIBrowser3 project as an embedded binary by using the plus button in the General pane.</li>
+<li>Revised AccessibilityCheckboxExtension by importing PFAccessibilityAuthorizer2.</li>
+<li>Revised AccessibilityCheckboxExtension <code>toggleAccessibilityList(_:)</code> by temporarily calling <code>Authorizer().shoutOut()</code> to test the PFAccessibilityAuthorizer2 framework.</li>
+<li>Revised AppDelegate by importing PFAccessibilityAuthorizer2, declaring the accessibilityAuthorizer instance property, and revising the <code>applicationWillFinishLaunching(_:)</code> delegate method to create and initialize an instance of AccessibilityAuthorizer and set it to use sheets instead of modal alerts.</li>
+<li>Revised <code>applicationDidFinishLaunching(_:)</code> by moving the definition of AppDelegate.shared to the <code>applicationWillFinishLaunching(_:)</code> delegate method, along with the accessibilityAuthorizer calls.</li>
+<li>Revised the AccessibilityCheckboxExtension <code>toggleAccessibility(_:)</code> action method by calling <code>accessibilityAuthorizer.updateAndOpenAccessibilityList()</code>.</li>
+<li>Changed the target’s Packaging - PRODUCT_NAME (“Product Name”) build setting from $(Target_NAME) to UI Browser, so that PFAccessibilityAuthorizer2 will display it correctly in alerts while UI Browser is running in Xcode.</li>
+<li>Revised AppDelegate’s <code>applicationWillFInishLaunching(_:)</code> delegate method to call PFAccessibilityAuthorizer2’s convenience initializer.</li>
+<li>Added the <code>menuDidClose(_:)</code> delegate method to AppDelegate and the TargetMenuExtension on MainContentViewController to call requestAccess() after the Target menu is dismissed, and set MainContentViewController to conform to the NSMenuDelegate formal protocol.</li>
+<li>Successfully built and ran in Swift 4.</li>
+<li>Saved a snapshot of build version 29.</li>
+</ul>
+<h2>
+<a name="h-2017-11-21-300-build-30-26" class="anchor" href="#h-2017-11-21-300-build-30-26"></a>2017-11-21 (3.0.0 build 30)</h2>
+<p>Implement the NSUserInterfaceValidation and NSValidateUserInterfaceItem protocols for the Activate button in the MainContentViewController per Cocoa Recipes for Mac OS X (2nd Edition), Recipe 4, Step 4.</p>
+<ul>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 30.</li>
+<li>Created MainWindow.swift as a subclass of NSWindow to override its update() method, then decided to implement user interface validation in MainWindowController’s <code>windowDidUpdate()</code> delegate method instead.</li>
+<li>Revised the MainWindow.swift template heading by changing the copyright to “Copyright © 2017 Bill Cheeseman. All rights reserved. Used by permission.” and adding the line “Version 3.0.0”.</li>
+<li>Revised Main.storyboard by changing the Main Window Controller’s Main Window to Custom Class MainWindow instead of NSWindow.</li>
+<li>Revised MainContentViewController.swift by implementing the custom ValidatedControl protocol as a subprotocol of the NSValidatedUserInterfaceItem protocol and implementing the ValidatedButton subclass of NSButton declaring that it conforms to the custom ValidatedControl protocol.</li>
+<li>Revised Main.storyboard by setting the Activate button’s Custom Class to ValidatedButton instead of NSButton.</li>
+<li>Revised MainWindowController by implementing the <code>windowDidUpdate()</code> delegate method and calling the custom ValidatedControl protocol’s update() method.</li>
+<li>Revised MainContentViewController by implementing the <code>validateUserInterfaceItem(_:)</code> protocol method and declaring that MainContentViewController conforms to the NSUserInterfaceValidations formal protocol.</li>
+<li>Successfully built and ran in Swift 4.</li>
+<li>Saved a snapshot of build version 30.</li>
+</ul>
+<h2>
+<a name="h-2017-11-21-300-build-31-27" class="anchor" href="#h-2017-11-21-300-build-31-27"></a>2017-11-21 (3.0.0 build 31)</h2>
+<p>Implement the Detail button’s toggleDetailSplitItem(_<img src="https://forum.latenightsw.com/images/emoji/apple/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> action method.</p>
+<ul>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 31.</li>
+<li>Revised MainContentViewController by adding its disclosureButton outlet, and connected it in Main.storyboard.</li>
+<li>Created extension on MainContentViewController in DisclosureButtonExtension.swift.</li>
+<li>Revised the DisclosureButtonExtension.swift template heading by changing the copyright to “Copyright © 2017 Bill Cheeseman. All rights reserved. Used by permission.” and adding the line “Version 3.0.0”.</li>
+<li>Revised DisclosureButtonExtension by implementing the <code>discloseDetailSplitItem(_:)</code> action method to toggle the DetailSplitItem’s isCollapsed property.</li>
+<li>Connected <code>discloseDetailSplitItem(_:)</code> action method to MainContentViewcontroller’s First Responder in Main.storyboard.</li>
+<li>Revised DetailSplitItemViewController by implementing its shared static variable and setting it in viewDidLoad().</li>
+<li>Revised MainSplitViewController by implementing <code>splitView(_:canCollapseSubview)</code> delegate method to return true for the detail split item, so we can collapse it by dragging the divider, but then removed it in favor of setting the value in Main.storyboard.</li>
+<li>Revised MainContentViewController by changing the case statement in <code>prepare(for:sender:)</code> from MainContentViewSegueIdentifier to MainContentViewControllerSegueIdentifier, a bug that was preventing the detail split view from expanding and collapsing in some circumstances.</li>
+<li>Renamed Disclosure button as Detail button and the <code>discloseDetailSplitItem(_:)</code> action method as toggleDetailSplitItem.</li>
+<li>Revised the <code>toggleDetailSplitItem(_:)</code> action method to change only the isCollapsed property (removing the isHidden property), and added a call to the animator proxy to animate the expansion and collapse of the detail split item.</li>
+<li>Revised Main.storyboard by changing the detail button to a Square Momentary Push In borderless button with the same image (renamed), and removed the proxy animator binding from Main.storyboard.</li>
+<li>Revised Main.storyboard by disconnecting the delegate property of all NSWindow, NSTabView and NSSplitView objects because they are connected automatically by Xcode 9, per macOS High Sierra 10.13 AppKit Release Notes.</li>
+<li>Confirmed through testing that the <code>splitView(_ splitView:shouldCollapseSubview:forDoubleClickOnDividerAt:)</code> delegate method does not work in macOS High Sierra 10.13, but left it in place for testing under eariler versions of macOS.</li>
+<li>Successfully built and ran in Swift 4.</li>
+<li>Saved a snapshot of build version 31.</li>
+</ul>
+<h2>
+<a name="h-2017-11-23-300-build-32-28" class="anchor" href="#h-2017-11-23-300-build-32-28"></a>2017-11-23 (3.0.0 build 32)</h2>
+<p>Make the Detail button a Toggle button with on and off images.</p>
+<ul>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 32.</li>
+<li>Created DetailToggleButtonOnTemplate.pdf and DetailToggleButtonOffTemplate.pdf images in Photoshop and added them to Assets.xcassets.</li>
+<li>Revised MainContentViewController’s <code>validateUserInterfaceItem(_:)</code> protocol method by adding a branch to toggle the state of the detail button when the detail split view item is collapsed or expanded.</li>
+<li>Revised Main.storyboard by setting the detail button’s Custom Class to ValidatedButton instead of NSButton.</li>
+<li>Successfully built and ran in Swift 4.</li>
+<li>Saved a snapshot of build version 32.</li>
+</ul>
+<h2>
+<a name="h-2017-11-23-300-build-33-29" class="anchor" href="#h-2017-11-23-300-build-33-29"></a>2017-11-23 (3.0.0 build 33)</h2>
+<p>Make Target menu and Accessibility checkbox respond to changes in access status.</p>
+<ul>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 33.</li>
+<li>Revised MainContentViewController’s <code>validateUserInterfaceItem(_:)</code> protocol method by adding a branch to update the state of the Accessibility checkbox based on the value of isProcessTrusted.</li>
+<li>Revised Main.storyboard by setting the accessibility checkbox’s Custom Class to ValidatedButton instead of NSButton.</li>
+<li>Revised MainContentViewController’s <code>viewDidLoad()</code> method to observe the AccessAuthorizer.didChangeAccessStatusNotification notification, and added the <code>didChangeAccessStatus(_:)</code> notification method to respond by clearing the application and setting the Target menu to No Target.</li>
+<li>Revised TargetMenuExtension by adding an import PFAccessibilityAuthorizer2 statement</li>
+<li>Revised the <code>MainContentViewController.validateUserInterfaceItem(_:)</code> notification method to use a switch statement.</li>
+<li>Successfully built and ran in Swift 4.</li>
+<li>Saved a snapshot of build version 33.</li>
+</ul>
+<h2>
+<a name="h-2017-11-25-300-build-34-30" class="anchor" href="#h-2017-11-25-300-build-34-30"></a>2017-11-25 (3.0.0 build 34)</h2>
+<p>Conform MainContentViewController to AccessibilityElement’s AccessibleElementDelegate protocol observing elements’ destruction.</p>
+<ul>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 34.</li>
+<li>Revised MasterSplitItemViewController by implementing the <code>refreshApplication(_:)</code> action method.</li>
+<li>Revised Main.storyboard by connecting the <code>refreshApplication(_:)</code> action method to First Responder.</li>
+<li>Revised MasterSplitItemViewController by implementing refreshApplicationToRoot(_<img src="https://forum.latenightsw.com/images/emoji/apple/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> for Shift-click on refresh application button.</li>
+<li>Revised MainContentViewController’s <code>viewDidLoad()</code> by registering as an observer of the PFAssistiveFramework4 AccessibilityElement’s elementWasDestroyedNotification.</li>
+<li>Revised MainContentViewController by implementing the <code>elementWasDestroyed(_:)</code> notification method as a test stub.</li>
+<li>Revised <code>ElementDataModel.updateDataModelForCurrentElementAt(level:index:)</code> to set every child element’s delegate property when it is added to the data source for display.</li>
+<li>Revised MainContentViewController by implementing an extension on MainContentViewController declaring that it conforms to the AccessibleElementDelegate formal protocol, and moved the notification method test stub into the extension, so it can also serve as the delegate method as well as a notification method.</li>
+<li>Successfully built and ran in Swift 4.</li>
+<li>Saved a snapshot of build version 34.</li>
+</ul>
+<h2>
+<a name="h-2017-12-01-300-build-35-31" class="anchor" href="#h-2017-12-01-300-build-35-31"></a>2017-12-01 (3.0.0 build 35)</h2>
+<p>Revise ElementDataModel to cache selected parent and child nodes and track the selected element path as the user selects UI elements.</p>
+<ul>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 35.</li>
+<li>Revised ElementDataModel’s ElementNodeKey enum by adding .parentNodeKey and .childNodeKey.</li>
+<li>Revised ElementDataModel by implementing the elementPath property.</li>
+<li>Revised ElementDataModel’s designated initializer by creating elementPath as an empty array.</li>
+<li>Revised ElementDataModel <code>updateDataModel(forSystemWideElement:)</code> and <code>updateDataModel(forApplicationElement:)</code> by adding .parentElementKey and .childElementKey values of an empty dictionary to the node.</li>
+<li>Revised ElementDataModel <code>updateDataForCurrentElementAt(level:index:)</code> by setting the selected node’s parent node’s child node, setting the parent nodes of all of the selected node’s child nodes to the selected node, setting their child nodes to an empty dictionary, and updating the elementPath property.</li>
+<li>Revised ElementDataModel <code>clearDataModel()</code> by removing all from elementPath.</li>
+<li>Successfully built and ran in Swift 4.</li>
+<li>Saved a snapshot of build version 35.</li>
+</ul>
+<h2>
+<a name="h-2017-12-02-300-build-36-32" class="anchor" href="#h-2017-12-02-300-build-36-32"></a>2017-12-02 (3.0.0 build 36)</h2>
+<p>Implement color coding for destroyed elements.</p>
+<ul>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 36.</li>
+<li>Moved development to Xcode 9.2, Swift 4.0.3.</li>
+<li>Revised MainContentViewController by implementing the destroyedColor property.</li>
+<li>Revised BrowserTabItemViewController by implementing the <code>browser(_:wilDisplayCell:atRow:column:)</code> optional item-based NSBrowser delegate method.</li>
+<li>Revised BrowserTabItemViewController by implementing <code>modifiedObjectValueForCell(_:atRow:column:)</code>, called by the <code>browser(_willDisplayCell:atRow:column:)</code> delegate method, to change the color of destroyed elements to destroyedColor just before the element is displayed.</li>
+<li>Revised BrowserTabItemViewController by implementing the <code>browser(_:isColumnValid:)</code> delegate method to return false if any cell in the column is destroyed, thereby forcing NS Browser to reload the column, and revised the MainContentViewController elementWasDestroyed delegate method to call the browser’s <code>validateVisibleColumns()</code> method to call <code>browser(_:isColumnValid:)</code> on every visibile column. Confirmed that this caused all destroyed elements to turn destroyedColor as soon as any one of them was destroyed.</li>
+<li>Removed the new column validation methods because they are too inefficient, being called by every element that is destroyed and repeatedly redrawing all of them on each call. Will instead call <code>reloadData(forRowIndexes:inColumn)</code> only once for each cell holding a destroyed element and only for that element. The ElementDataModel must set the indexPath of each AccessibleElement when it is added to the data source, so it can efficiently tell the browser which row and column it is in when it is destroyed instead of forcing the browser to search for it.</li>
+<li>Revised AccessibleElement by adding an indexPath property.</li>
+<li>Revised MainContentViewController’s <code>elementWasDestroyed(_:)</code> delegate method to call <code>reloadData(forRowIndexes:inColumn)</code>.</li>
+<li>Successfully built and ran in Swift 4, but errors when select a destroyed element.</li>
+<li>Saved a snapshot of build version 36.</li>
+</ul>
+<h2>
+<a name="h-2018-01-17-300-build-37-33" class="anchor" href="#h-2018-01-17-300-build-37-33"></a>2018-01-17 (3.0.0 build 37)</h2>
+<p>Review all for best Swift 4 practices.</p>
+<ul>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 37.</li>
+<li>Revised <code>AppDelegate.menuNeedsUpdate(_:)</code> by adding assert() to test assignment to ‘controller’ instead of using a guard block.</li>
+<li>Revised all classes that declare a ‘shared’ type property to use a ‘sharedInstance’ property instead.</li>
+<li>Revised AppDelegate.swift by removing its ‘sharedInstance’ property, and replaced all calls to it with NSApp.delegate.</li>
+<li>Revised <code>MainContentViewController.displayNameForTargetApplication()</code> by removing unneeded reference to ‘MainContentViewController.sharedInstance’.</li>
+<li>Revised MainContentViewController by adding ‘<span class="mention">@objc</span> dynamic’ to the detailSplitViewItem property.</li>
+<li>Revised MasterSplitItemViewController.swift by calling masterTabViewController instead of MasterTabViewController.sharedInstance in <code>updateView()</code> and <code>clearView()</code>.</li>
+<li>Revised <code>AppDelegate.menuDidClose(_:)</code> by testing ‘menu == targetMenu’ instead of ‘menu.title == TARGET_MENU_TITLE’.</li>
+<li>Revised <code>MainContentViewController.menuDidClose(_:)</code> (in TargetMenuExtension) by testing ‘menu == targetPopUpButton.menu’ instead of menu.numberOfItems, etc.</li>
+<li>Revised <code>MainWindowController.windowDidUpdate(_:)</code> by replacing for-in loop with forEach closure.</li>
+<li>Revised <code>MainWindowController.prepare(for:sender:)</code> by adding <code>preconditionFailure()</code> to default case of switch statement, and in other locations.</li>
+<li>Revised <code>MainWindowController.updateTargetMenu(_:)</code> (in TargetMenuExtension) by replacing for-in loops with forEach closures, combining them into a nested function, and simplifying the sort routines.</li>
+<li>Revised <code>MasterSplitItemViewController.refreshApplication()</code> by replacing for-in loop with forEach closure.</li>
+<li>Successfully built and ran in Swift 4.</li>
+<li>Saved a snapshot of build version 37.</li>
+</ul>
+<h2>
+<a name="h-2018-01-26-300-build-38-34" class="anchor" href="#h-2018-01-26-300-build-38-34"></a>2018-01-26 (3.0.0 build 38)</h2>
+<p>Redesign user interface validation per <a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/UIValidation/UIValidation.html#//apple_ref/doc/uid/10000040i">https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/UIValidation/UIValidation.html#//apple_ref/doc/uid/10000040i</a>.</p>
+<ul>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 38.</li>
+<li>Revised forEach loops to use ‘let’ declarations inside loops instead of ‘var’ declarations outside loops.</li>
+<li>Revised MainContentViewController by implementing the <code>updateValidatedControls()</code> method to validate and update controls that conform to the ValidatedControls subprotocol of the NSUserInterfaceItem protocol, using code formerly located in <code>MainWindowController.windowDidUpdate(_:)</code>.</li>
+<li>Revised the <code>MainWindowController.windowDidUpdate(_:)</code> delegate method by calling the new MainContentViewController.updateValidatedControls() method.</li>
+<li>Revised MainContentViewController.updateValidatedControls to avoid creating a local constant.</li>
+<li>Revised MainContentViewController’s <code>ValidatedButton.update()</code> method to make it more general.</li>
+<li>Successfully built and ran in Swift 4.</li>
+<li>Saved a snapshot of build version 38.</li>
+</ul>
+<p><span class="hashtag">#2018-01-28</span> (3.0.0 build 39)<br>
+Make the Detail toggle button conform to the current system control tint per <a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/DrawColor/Tasks/SystemTintAware.html#//apple_ref/doc/uid/20002180-BCIBFAHH">https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/DrawColor/Tasks/SystemTintAware.html#//apple_ref/doc/uid/20002180-BCIBFAHH</a>.</p>
+<ul>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 39.</li>
+<li>Revised Info.plist NSHumanReadableCopyright (Copyright (human-readable)) and InfoPlist.strings NSHumanReadableCopyright ending year to 2018.</li>
+<li>Renamed <code>MainContentViewController.updateApplication(for:using:)</code> as <code>updateApplication(forNewTarget:usingTargetElement:)</code>.</li>
+<li>Renamed <code>MainContentViewController.updateData(using:)</code> as <code>updateData(usingTargetElement:)</code>.</li>
+<li>Revised Main.storyboard by connecting Main Content View Controller’s detailButton IBOutlet to the Detail button.</li>
+<li>Revised Assets.xcassets by replacing DetailToggleButtonOnTemplate and DetailToggleButtonOffTemplate images with Blue and Graphite counterparts DetailToggleButtonBlueOn, DetailToggleButtonBlueOff, DetailToggleButtonGraphiteOn andf DetailToggleButtonGraphiteOff.</li>
+<li>Revised Main.storyboard by changing the Detail button’s Image Set settings to Render As: Default, Resizing: Preserve Vector Data, Devices: Mac, and Scales: Single Scale.</li>
+<li>Revised MainContentViewController (in DetailButtonExtension.swift) by implementing the setDetailButtonColor() method to set the Detail button’s image based on the current Tint Color and expanded or collapsed state of the main split view.</li>
+<li>Revised <code>MainContentViewController.viewDidLoad()</code> by registering to observe the <code>NSColor.currentControlTintDidChangeNotification</code> notification.</li>
+<li>Revised MainContentViewController by implementing the <code>systemTintDidChange()</code> notification method to call the <code>setDetailButtonColor()</code> method (and similar methods for any other custom controls) when the user changes the Appearance setting in General preferences.</li>
+<li>Revised AppDelegate by implementing the <code>applicationDidBecomeActive(_:)</code> and <code>applicationDidResignActive(_:)</code> NSApplicationDelegate delegate methods to change the Detail button’s color to graphite (clear) when the application is not active.</li>
+<li>Revised the Detail button images to use thinner lines.</li>
+<li>Successfully built and ran in Swift 4.</li>
+<li>Saved a snapshot of build version 39.</li>
+</ul>
+<h2>
+<a name="h-2018-02-05-300-build-40-35" class="anchor" href="#h-2018-02-05-300-build-40-35"></a>2018-02-05 (3.0.0 build 40)</h2>
+<p>Implement the refreshApplication action method and support, and clean up build 37’s errors when selecting a destroyed element.</p>
+<ul>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 40.</li>
+<li>Revised ElementDataModel by implementing <code>clearDataModelBeyondLevel(_:)</code> method.</li>
+<li>Revised ElementDataModel by renaming private properties elementTree as elementNodeTree, elementPath as currentElementNodePath and currentNode as currentElementNode, renaming public property indexPathOfCurrentElement as currentElementIndexPath, and adding public property currentElementPath.</li>
+<li>Revised <code>ElementDataModel.updateDataModelForCurrentElementAt(level:index:)</code> to fix two bugs (1) by removing the guard statement and adding currentElementNode to currentElementNodePath even when it has no children (it is a leaf node), and (2) by removing a previous currentElementNode from currentElementNodePath if the user selected a differrent row in the currently selected column.</li>
+<li>Revised <code>MasterSplitViewController.refreshApplication()</code>.</li>
+<li>Revised ElementDataModel by adding the <code>removeNodeAt(level:Index:)</code>, <code>nodesAt(level:)</code> and <code>elements(atLevel:)</code> methods.</li>
+<li>Successfully built and ran in Swift 4.</li>
+<li>Saved a snapshot of build version 40.</li>
+</ul>
+<h2>
+<a name="h-2018-03-14-300-build-41-36" class="anchor" href="#h-2018-03-14-300-build-41-36"></a>2018-03-14 (3.0.0 build 41)</h2>
+<p>Implement OutlineTabItemViewController and ListTabItemViewController.</p>
+<ul>
+<li>Changed the project’s Versioning - <code>CURRENT_PROJECT_VERSION</code> (“Current Project Version”) build setting to 41.</li>
+<li>Revised OutlineTabItemViewController and ListTabItemViewController by declaring that they conform to the NSOutlineViewDataSource and NSTableViewDataSource protocols.</li>
+<li>Revised MasterSplitItemViewController’s <code>updateView()</code> and <code>clearView()</code> methods to call the corresponding OutlineTabItemViewController and ListTabItemViewController methods.</li>
+<li>Revised OutlineTabItemViewController and ListTabItemViewController by implementing <code>updateView()</code> and <code>clearView()</code> method stubs.</li>
+<li>Revised OutlineTabItemViewController and ListTabItemViewController by implementing a sharedInstance type property and setting it in <code>viewDidLoad()</code>.</li>
+<li>Revised Main.storyboard by inserting a path control and outline view in the Outline Tab Item View Controller Scene and a path control and a table view in the List Tab Item View Controller Scene, by connecting their dataSource outlets, and by configuring their constraints.</li>
+<li>Revised OutlineTabItemViewController and ListTabItemViewController by adding an elementOutline and elementList IBOutlet, and connected them in Main.storyboard.</li>
+<li>Revised OutlineTabItemViewController and ListTabItemViewController by implementing the selectElement(_<img src="https://forum.latenightsw.com/images/emoji/apple/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> action method and connected them in Main.storyboard. This is subject to rethinking because it could all be done in the …DidSelect delegate method instead, if nothing needs to be done when a clicked row was already selected.</li>
+<li>Revised ListTabItemViewController by declaring the listPathControl IBOutlet, and by connecting it in Main.storyboard.</li>
+<li>Revised ListTabItemViewController by implementing the numberOfRows(in:) dataSource method and the <code>tableView(_:viewFor:row:)</code> delegate method for view-based tab views.</li>
+<li>Revised Main.storyboard by connecting the List Tab Item View Controller’s path control’s delegate outlet to ListTabItemViewController, in addition to the dataSource outlet.</li>
+<li>Revised ListTabItemViewController by declaring that it conforms to the NSPathControlDelegate protocol.</li>
+<li>Revised ListTabItemViewController by implementing the <code>pathControl(_:willPopUp:)</code> delegate method.</li>
+<li>Revised ListTabItemViewController.swift by declaring the <code>clickedPathControlItemIndex</code> global variable used in the <code>pathControl(_:willPopUp:)</code> delegate method to populate the pop-up menu based on the selected item.</li>
+<li>Revised <code>ListTabItemViewcontroller</code> by declaring the <code>ListPathControl</code> subclass of <code>NSPathControl</code> and implementing an override of <code>mouseDown(with:)</code> to set the new <code>clickedPathControlItemIndex</code> global variable.</li>
+<li>Moved development to Xcode 9.3.1, Swift 4.1.</li>
+<li>Moved development to Xcode 9.4.0, Swift 4.1.2.</li>
+<li>Saved a snapshot of build version 41 (2018-10-28).</li>
+</ul>
+<p>====</p>
+<h2>
+<a name="h-2018-10-28-300-build-42-37" class="anchor" href="#h-2018-10-28-300-build-42-37"></a>2018-10-28 (3.0.0 build 42)</h2>
+<p>Update to macOS Mojave 10.14, Xcode 10, and Swift 4.2.</p>
+<ul>
+<li>Moved development to macOS Mojave 10.14.0, Xcode 10.0.0, Swift 4.2.</li>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 42.</li>
+<li>Changed the Project’s Deployment (macOS Deployment Target or <code>MACOSX_DEPLOYMENT_TARGET</code>) to macOS 10.14.</li>
+<li>Revised the MasterSplitItemViewController.swift and MainContentViewController.swift <code>prepare(for:sender:)</code> methods to use as? instead of as! to fix build errors.</li>
+<li>Miscellaneous revisions to UIBrowser3 ListTabItemViewController.swift to begin dealing with Mojave deprecations of NSPathControl cell methods.</li>
+<li>Removed references to UIBrowser3Tests and UIBrowser3UITests targets and deselected Test for them in UIBrowser3 scheme to prepare for conversion to Swift 4.2.</li>
+<li>Converted the Target to Current Swift Syntax (Swift 4.2).</li>
+<li>Changed the Project’'s Swift Compiler - Language (Swift Language Version or SWIFT_VERSION) to Swift 4.2.</li>
+<li>Revised Main.storyboard to change the placeholder for the outline and list master tab view items from “root” to “No Target.”</li>
+<li>Saved a snapshot of build version 42.</li>
+</ul>
+<h2>
+<a name="h-2018-10-28-300-build-43-38" class="anchor" href="#h-2018-10-28-300-build-43-38"></a>2018-10-28 (3.0.0 build 43)</h2>
+<p>Complete a version of the list path control and its pop-up menu in ListTabItemViewController subclassing NSPathControl to capture a mouse down event to position the first menu item.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 43.</li>
+<li>Revised ListTabItemViewController <code>updateView()</code> and <code>clearView()</code> to eliminate the use of the “root” placeholder and the “root” persistent first path control item.</li>
+<li>Implemented the <code>ListTabItemViewController</code> <code>selectPathControlItem(_:)</code> action method to set the clickedPathControlItemIndex property and connected it to the list path control in Main.storyboard.</li>
+<li>Revised the <code>ListPathControl</code> <code>mouseDown(with:)</code> override method to create the pop-up menu and position it over the clicked path control item.</li>
+<li>Renamed the <code>ListTabItemViewController</code> <code>menuForCell(_:)</code> method as <code>menuForPathItem(_:)</code> and revised it to remove the “root” item.</li>
+</ul>
+<ul>
+<li>Revised the <code>ListTabItemViewController</code> <code>selectElement(_:)</code> action method.</li>
+</ul>
+<ul>
+<li>Moved development to macOS Mojave 10.14.1, Xcode 10.1.0, Swift 4.2.1.</li>
+<li>Cleaned out old comments and unused code.</li>
+<li>Saved a snapshot of build version 43.</li>
+<li>Commited Source Control.</li>
+</ul>
+<p>#<span class="hashtag">#2018-11-01</span> (3.0.0 build 44)<br>
+Implement a new version of the list path control and its pop-up menu in ListTabItemViewcontroller using NSMenuDelegate for the list path control pop-up menu without subclassing NSPathControl to position the first menu item.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 44.</li>
+<li>Revised Main.storyboard by disconnecting the list path control’s delegate connection.</li>
+<li>Revised ListTabItemViewController by declaring that it conforms to the <code>NSMenuDelegate</code> formal protocol.</li>
+<li>Revised <code>ListTabItemViewController</code> <code>menuForPathItem(_:)</code> by setting the controller as the new pop-up menu’s delegate.</li>
+<li>Revised <code>ListTabItemViewController</code> by mplementing stubs for <code>ListTabItemViewController</code> <code>menuNeedsUpdate(_:)</code> and <code>menu(_:willHighlight)</code>.</li>
+<li>Removed the <code>ListPathControl</code> subclass of <code>NSPathControl</code> and its <code>mouseDown(with:)</code> override method.</li>
+<li>Revised <code>ListTabItemViewController</code> by renaming the <code>selectPathItem(_:)</code> action method <code>popUpPathControlMenu(_:)</code>, and revising it to not only detect which path item was clicked but also to create the pop-up menu, set its delegate, configure its menu items with an express call to the <code>menuNeedsUpdate(_:)</code> delegate method, and pop it up with the menu item for the clicked path item positioned over the clicked path item.</li>
+<li>Revised ListTabItemViewController by moving the <code>menuForPathItem(_:)</code> code that creates menu items into <code>configurePathControlMenu(_:)</code> and the code that sets a submenu into the <code>menu(_:willHighlight:)</code> delegate method.</li>
+<li>Revised <code>ListTabItemViewController</code> by removing <code>menuForPathItem(_:)</code> because the top-level menu is now created in the <code>popUpPathControlMenu(_:)</code> action method and the menu items and submenus are created in the delegate methods.</li>
+<li>Revised <code>ListTabItemViewController</code> by moving the <code>configurePathControlMenu(_:)</code> code into the <code>menuNeedsUpdated(_:)</code> delegate method and removing <code>configurePathControlMenu(_:)</code>, because.</li>
+<li>Added an extension on NSMenu to get the level of a path item submenu in the delegate methods.</li>
+<li>Generally revised all of the code for the list path control and the pop-up menu to work correctly.</li>
+<li>Revised <code>ElementDataModel</code> <code>updateDataModelForCurrentElementAt(level:index:)</code> to update level and index, not index always set to 0 (which was for testing).</li>
+<li>Revised <code>ListTabItemViewController</code> by implementing the <code>NSMenuDelegate</code> <code>menuWillOpen(_:)</code> and menuDidClose(_<img src="https://forum.latenightsw.com/images/emoji/apple/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> delegate methods to cache the datasource when the user opens the list path control pop-up menu and restore it if the user closes the menu without choosing a menu item. This required adding methods to <code>ElementDataModel</code>.</li>
+<li>Revised <code>ElementDataModel</code> by adding the <code>cachedElementNodeTree</code> private instance variable and the <code>cacheDataModel(_:)</code> and <code>restoreDataModel(_:)</code> methods.</li>
+<li>Revised <code>ElementDataModel</code> by adding <code>mediumDescription(ofNode:)</code> method for use in the path control pop-up menu, and made many other changes to accommodate it.</li>
+<li>Cleaned out old comments and unused code.</li>
+<li>Saved a snapshot of build version 44.</li>
+<li>Commited Source Control.</li>
+</ul>
+<h2>
+<a name="h-2018-11-13-300-build-45-39" class="anchor" href="#h-2018-11-13-300-build-45-39"></a>2018-11-13 (3.0.0 build 45)</h2>
+<p>Fix remaining issues in the list path control and its pop-up menu.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 45.</li>
+<li>Revised ElementDataModel by adding the <code>cachedCurrentIndexPath</code> private instance variable and removing the <code>cachedElementNodeTree</code>, <code>cachedCurrentElementNode</code> and <code>cachedCurrentElementNodePath</code> private instance variables.</li>
+<li>Revised <code>ElementDataModel</code> by revising <code>cacheDataModel(_:)</code> and <code>restoreDataModel(_:)</code> methods to save only the current index path and restore in a loop by calling <code>updateDataModelForCurrentElementAt(level:index:)</code> for each level of the index path.</li>
+<li>Revised <code>ListTabItemViewController</code> by implementing the <code>menuWasDismissed()</code> <span class="mention">@objc</span> method and performing after a delay in the <code>menuDidClose(_:)</code> delegate method to determine whether the user dismissed the path control pop-up menu without selecting a UI element.</li>
+<li>Revised <code>ListTabItemViewController</code> <code>selectElement(_:)</code> and <code>updateView()</code> to set the font size of the list path control titles to small.</li>
+<li>Cleaned out old comments and unused code.</li>
+<li>Saved a snapshot of build version 45.</li>
+<li>Commited Source Control.</li>
+</ul>
+<h2>
+<a name="h-2018-11-16-300-build-46-40" class="anchor" href="#h-2018-11-16-300-build-46-40"></a>2018-11-16 (3.0.0 build 46)</h2>
+<p>Fix segmented control and View &gt; UI Elements menu in the Master split view to display an existing datasource in the list view when switching from another view.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 46.</li>
+<li>Revised <code>MasterSplitItemViewController</code> by implementing the <code>showMasterTabItem(_:)</code> action method calling <code>showView()</code> and connecting it to the <code>masterTabViewSelector</code> segmented control in Main.storyboard.</li>
+<li>Revised Main.storyboard Main Menu by rewording the “Show UI Element Hierarchy” menu as “UI Elements” and changing its menu items as “Show in Browser”, “Show in Outline” and “Show in List”.</li>
+<li>Revised Main.storyboard Main Menu by rewording the “Show UI Element Detail” menu as “UI Element Information” and changing its menu items as “Show Attributes”, “Show Actions” and “Show Notifications”.</li>
+<li>Revised Main.storyboard by connecting the <code>showMasterTabItem(_:)</code> action method to the masterTabViewSelector segmented control and the View &gt; UI Elements &gt; Show menu items.</li>
+<li>Revised <code>MasterSplitItemViewController</code> by implementing the <code>validateMenuItem(_:)</code> protocol method for the View &gt; UI Elements &gt; Show menu items, and declared that the controller conforms to the <code>NSMenuItemValidation</code> formal protocol.</li>
+<li>Revised Main.storyboard by adding tags to the segmented control items and View &gt; UI Elements &gt; Show menu items, for use in the action method.</li>
+<li>Revised <code>MasterSplitItemViewController</code> by implementing the showView() method called by the <code>showMasterTabItem(_:)</code> action method.</li>
+<li>Revised <code>ListTabItemViewController</code> by implementing the <code>showView()</code> method called by the <code>MasterSplitItemViewController</code> <code>showView()</code> method.</li>
+<li>Saved a snapshot of build version 46.</li>
+<li>Commited Source Control.</li>
+</ul>
+<h2>
+<a name="h-2018-11-17-300-build-47-41" class="anchor" href="#h-2018-11-17-300-build-47-41"></a>2018-11-17 (3.0.0 build 47)</h2>
+<p>General improvements to the browser and list views, including more fixes for the segmented control and View &gt; UI Elements menu in the Master split view.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 47.</li>
+<li>Revised <code>BrowserTabItemViewController</code> by implementing the <code>showView()</code> method called by the <code>MasterSplitItemViewController</code> <code>showView()</code> method.</li>
+<li>Revised <code>BrowserTabItemViewController</code> by implementing the <code>browserWillScroll(_:)</code> delegate method to work around a longstanding bug that leaves a browser column title undisplayed when a hidden column scrolls into view.</li>
+<li>Revised <code>BrowserTabItemViewController</code> and <code>ListTabItemViewController</code> <code>showView()</code> methods to call clearView() if the chosen target was No Target when the master tab view item was switched.</li>
+<li>Revised ListTabItemViewController selectElement(_<img src="https://forum.latenightsw.com/images/emoji/apple/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> action method to handle user clicking a table row by updating the list path control, the data model, and the list view.</li>
+<li>Revised ListTabItemViewController by moving the table view branch of the selectElement(<em><img src="https://forum.latenightsw.com/images/emoji/apple/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> action method into the tableViewSelectionDidChange(</em><img src="https://forum.latenightsw.com/images/emoji/apple/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> delegate method to handle selection using the mouse or keyboard there and leave the action method to handle only the list path control.</li>
+<li>Revised <code>ElementDataModel</code> by adding <code>updateIsPending</code> instance variable and setting it to true in all of the update… methods, and setting it to false in the <code>ListTabItemViewController</code> <code>tableViewSelectionDidChange(_:)</code> delegate method after using it to avoid duplicate updates to the data model.</li>
+<li>Cleaned out old comments and unused code.</li>
+<li>Saved a snapshot of build version 47.</li>
+<li>Commited Source Control.</li>
+</ul>
+<h2>
+<a name="h-2018-11-22-300-build-48-42" class="anchor" href="#h-2018-11-22-300-build-48-42"></a>2018-11-22 (3.0.0 build 48)</h2>
+<p>Create new class ElementPathControlManager to consolidate code for the path controls for reuse in the other master tab item element views.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 48.</li>
+<li>Created a new file ElementPathControlManager.swift and implemented the <code>ElementPathControlManager</code> class in it.</li>
+<li>Revised <code>ListTabItemViewController</code> and <code>ElementPathControlManager</code> by moving all code relating to the management of the list path control from the former to the latter.</li>
+<li>Revised <code>MasterSplitItemViewController</code> by adding the <code>currentElementView()</code> method, and revised <code>ElementPathControlManager</code> to use it in the <code>menuDidClose(_:)</code> delegate method to make the current element view first responder so it will respond to arrow key presses.</li>
+<li>Revised <code>MasterSplitItemViewController</code> by adding the <code>currentTabItemSelectElementAction() </code>method, and revised <code>ElementPathControlManager</code> to use it in the <code>menuNeedsUpdate(_:)</code> delegate method to set the current element view’s <code>selectElement(_:)</code> as the action method for pop-up menu items.</li>
+<li>Saved a snapshot of build version 48.</li>
+<li>Commited Source Control.</li>
+</ul>
+<p>#<span class="hashtag">#2018-11-23</span> (3.0.0 build 49)<br>
+Implement right-click contextual menu in the list view.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 49.</li>
+<li>Created the <code>ListTableView</code> subclass of <code>NSTableView</code> and implemented an override of <code>NSTableView</code> <code>menu(for:)</code> to create a contextual menu automatically and set its delegate to <code>ListTabItemViewController</code> when the user right-clicks or Control-clicks the list view.</li>
+<li>Revised <code>ListTabItemViewController</code> to declare that it conforms to the <code>NSMenuDelegate</code> protocol.</li>
+<li>Revised <code>ListTabItemViewController</code> by adding the <code>menuNeedsUpdate(_:)</code>, <code>menu(_:willHighlight:)</code> and <code>menuWillClose(_:)</code> NSMenuDelegate methods to handle the contextual menu.</li>
+<li>Revised <code>ListTabItemViewController</code> by implementing the <code>menuWasDismissed()</code> <span class="mention">@objc</span> method and performing after a delay in the <code>menuDidClose(_:)</code> delegate method to determine whether the user dismissed the contextual menu without selecting a UI element.</li>
+<li>Revised <code>ListTabItemViewController</code> by implementing the <code>selectElementWithContextMenu(_:)</code> action method.</li>
+<li>Revised <code>ElementDataModel</code> <code>nodesAt(level:)</code> and one other to return nil if level is out of range.</li>
+<li>Saved a snapshot of build version 49.</li>
+<li>Commited Source Control.</li>
+</ul>
+<h2>
+<a name="h-2018-12-01-300-build-50-43" class="anchor" href="#h-2018-12-01-300-build-50-43"></a>2018-12-01 (3.0.0 build 50)</h2>
+<p>Implement the updateNeedsDisplay and selectionWasUpdated flags to manage selections, data model updates and their display in the list view.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 50.</li>
+<li>Revised the <code>ListTabItemViewController</code> <code>selectElement(_:)</code> action method by updating the dataSource for the final selection, to make sure the dataSource is always correct after an element is selected because updates during menu navigation do not update it when the mouse is moved to the left to a shallower level.</li>
+<li>Revised <code>ElementDataModel</code> and other classes by renaming the <code>updateIsPending</code> instance property as <code>updateNeedsDisplay</code>.</li>
+<li>Revised <code>ListTabItemViewController</code> <code>showView()</code> by setting <code>updateNeedsDisplay</code> to false instead of true.</li>
+<li>Revised <code>ListTabItemViewController</code> <code>upddateView()</code> by setting <code>updateNeedsDisplay</code> to false.</li>
+<li>Revised <code>ListTabItemViewController</code> by declaring the <code>selectionWasUpdated</code> instance property and initializing it to false, setting it to true in <code>updateView()</code>, <code>showView()</code>, <code>clearView()</code>, <code>selectElement(_:)</code> and <code>selectElementWithContextMenu(_:)</code>, and testing it and setting it to false in the <code>tableViewSelectionDidChange(_:)</code> delegate method.</li>
+<li>Saved a snapshot of build version 50.</li>
+<li>Commited Source Control.</li>
+</ul>
+<h2>
+<a name="h-2018-12-02-300-build-51-44" class="anchor" href="#h-2018-12-02-300-build-51-44"></a>2018-12-02 (3.0.0 build 51)</h2>
+<p>Implement a toolbar for the main content view controls.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 51.</li>
+<li>Revised Main.storyboard by dragging a toolbar from the library to the <code>MainWindowController</code> scene, set its Display to Icon Only, not Customizable and no Separator, and set its Size to Small.</li>
+<li>Copied and pasted the Target pop-up menu, Activate button, Accessibility checkbox and Split view button into the Allowed Toolbar Items area of the toolbar controller; removed the default Colors, Fonts and Print toolbar items, and dragge the 4 new items into the Default area.</li>
+<li>Resized the container view in the Main Content View Controller scene to fill it to the top, remove the 4 controls left underneath, and changed the Top Space constraint from 8 below the Target Pop Up Menu to Superview.</li>
+<li>Revised <code>MainWindowController</code> by moving the 4 tool bar controls IBOutlet declarations from <code>MainContentViewController</code> because the toolbar is in the main window area outside of its main content view.</li>
+<li>Revised <code>MainContentViewController</code> and extension references to the 4 controls by adding <code>MainWindowController.sharedInstance</code> to the reference path.</li>
+<li>Revised <code>MainContentViewController</code> by moving the <code>targetPopUpButton</code> initialization code from <code>viewDidLoad()</code> to <code>viewWillAppear()</code> to it is called after <code>MainWindowController</code> initializes its sharedInstance property in <code>windowDidLoad()</code>.</li>
+<li>Saved a snapshot of build version 51.</li>
+<li>Commited Source Control.</li>
+</ul>
+<h2>
+<a name="h-2018-12-03-300-build-52-45" class="anchor" href="#h-2018-12-03-300-build-52-45"></a>2018-12-03 (3.0.0 build 52)</h2>
+<p>Modernize the layout of the master and detail split views.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 52.</li>
+<li>Revised Main.storyboard by changing the constraints on the master and detail split item container views and the Browser, Outline and List Tab Item views to eliminate gaps around the edges of the window.</li>
+<li>Revised Main.storyboard by setting the Detail Tab View Controller scene Style to Tabs on Top instead of Unspecified, to eliminate the border around the edge and the dark background.</li>
+<li>Saved a snapshot of build version 52.</li>
+<li>Commited Source Control.</li>
+</ul>
+<h2>
+<a name="h-2018-12-03-300-build-53-46" class="anchor" href="#h-2018-12-03-300-build-53-46"></a>2018-12-03 (3.0.0 build 53)</h2>
+<p>Continue Implementing OutlineTabItemViewController.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 53.</li>
+<li>Revised <code>OutlineTabItemViewController</code> by declaring the <code>elementPathControlManager</code> instance property and initializing it.</li>
+<li>Revised <code>OutlineTabItemViewController</code> by delaring the <code>selectionWasUpdated</code> instance property and initializing it.</li>
+<li>Revised <code>OutlineTabItemViewController</code> by declaring the <code>outlinePathControl</code> IBOutlet and connected it in Main.storyboard.</li>
+<li>Revised <code>OutlineTabItemViewController</code> <code>viewDidLoad()</code> by setting the font size of the path control.</li>
+<li>Revised <code>OutlineTabItemViewController</code> <code>updateView()</code>, <code>showView()</code>, <code>clearView()</code>, <code>popUpPathControlMenu(_:) and selectElement(_:)</code>,  by adapting them from <code>ListTabItemViewController</code>.</li>
+<li>Revised <code>OutlineTabItemViewController</code> by implementing the <code>outlineView(_;child:ofItem:)</code>, <code>outlineView(_:isItemExpandable:)</code>, <code>outlineView(_:numberOfChildrenOfItem:)</code> and <code>outlineView(_:objectValueFor:byItem:)</code> <code>NSOutlineViewDataSource</code> methods.</li>
+<li>Revised <code>OutlineTabItemViewController</code> by declaring that it conforms to the <code>NSOutlineDelegate</code> protocol</li>
+<li>Revised Main.storyboard by connecting the outline view’s delegate outlet and disconnecting its action method.</li>
+<li>Revised <code>OutlineTabItemViewController</code> viewDidLoad() by calling <code>elementOutline.reloadData()</code> per Apple’s <code>NSOutlineView</code> documentation.</li>
+<li>Revised <code>OutlineTabItemViewController</code> <code>outlineView(_:numberOfChildrenOfItem:)</code> by returning 0 if the data source is empty per Apple’s <code>NSOutlineView</code> documentation.</li>
+<li>Saved a snapshot of build version 53.</li>
+<li>Commited Source Control?</li>
+</ul>
+<h2>
+<a name="h-2018-12-06-300-build-54-47" class="anchor" href="#h-2018-12-06-300-build-54-47"></a>2018-12-06 (3.0.0 build 54)</h2>
+<p>Fix Detail Tab View tabs in Main.storyboard.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 54.</li>
+<li>Revised Main.storyboard in numerous ways to make the detail tab view look better.</li>
+<li>Saved a snapshot of build version 54.</li>
+<li>Commited Source Control.</li>
+</ul>
+<h2>
+<a name="h-2018-12-06-300-build-55-48" class="anchor" href="#h-2018-12-06-300-build-55-48"></a>2018-12-06 (3.0.0 build 55)</h2>
+<p>Continue Implementing OutlineTabItemViewController.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 55.</li>
+<li>Revised <code>ListTabItemViewController</code> <code>viewDidLoad()</code> to call <code>elementList.reloadData()</code> and the <code>numberOfRows(in:)</code> <code>NSTableViewDataSource</code> method per Apple’s <code>NSTableView</code> documentation, to match similar code in <code>OutlineTabItemViewController</code> <code>viewDidLoad()</code> and the <code>outlineView(_:numberOfChildrenOfItem:)</code> <code>NSOutlineViewDataSource</code> method per Apple’s <code>NSOutlineView</code> documentation.</li>
+<li>Revised <code>OutlineTabItemViewController</code> <code>updateView()</code> to expand the first row to show the children of the selected root application UI element.</li>
+<li>Revised <code>OutlineTabItemViewController</code> <code>showView()</code> to expand all rows in the selection path to show their siblings and children.</li>
+<li>Revised <code>OutlineTabItemViewController</code> <code>clearView()</code>.</li>
+<li>Revised <code>ListTabItemViewController</code> <code>updateView()</code>, <code>showView()</code> and <code>clearView()</code> to correspond to the new execution flow in the corresponding <code>ListTabItemViewController</code> methods.</li>
+<li>Revised <code>ListTabItemViewController</code> <code>viewDidLoad()</code> by setting <code>selectionWasUpdated</code> to true before calling <code>reloadData()</code>, as in <code>OutlineTabItemViewcontroller</code>.</li>
+<li>Globally changed <code>selectionWasUpdated</code> instance property to <code>selectionDeclinesDisplay</code>.</li>
+<li>Saved a snapshot of build version 55.</li>
+<li>Commited Source Control.</li>
+</ul>
+<h2>
+<a name="h-2018-12-08-300-build-56-49" class="anchor" href="#h-2018-12-08-300-build-56-49"></a>2018-12-08 (3.0.0 build 56)</h2>
+<p>Reverse order of subviews in master split item view controller.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 56.</li>
+<li>Revised Main.storyboard by moving the master tab view to the bottom of the master split view, reversing the top-to-bottom order of the two rows of controls now at the top of the master split view, reversing the top-to-bottom order of the Keystrokes and Screen Reader buttons, and changing the split view divider to the default thick divider</li>
+<li>Saved a snapshot of build version 56.</li>
+<li>Commited Source Control.</li>
+</ul>
+<h2>
+<a name="h-2018-12-08-300-build-57-50" class="anchor" href="#h-2018-12-08-300-build-57-50"></a>2018-12-08 (3.0.0 build 57)</h2>
+<p>Continue Implementing OutlineTabItemViewController.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 57.</li>
+<li>Revised Main.storyboard by connecting the outline view path control IBAction to the <code>OutlineTabItemViewController</code>.</li>
+<li>Revised <code>MasterSplitItemViewController</code> <code>currentTabItemSelectElementAction()</code> by uncommenting and revising the <code>MasterTabViewItemIndex.Outline.rawValue</code> case to return the <code>OutlineTabItemViewController</code> <code>selectElement(_:)</code> action selector.</li>
+<li>Revised <code>OutlineTabItemViewController</code> <code>selectElement(_:)</code> by changing the <span class="mention">@IBAction</span> attribute to <span class="mention">@objc</span> because its selector is connected to path control pop-up menu items using a <span class="hashtag">#selector</span> expression.</li>
+<li>Revised <code>OutlineTabItemViewController</code> <code>selectElement(_:)</code> by adopting the node-based technique used in <code>showView()</code> to set the <code>selectedRow</code> local variable by getting the row of the selected item.</li>
+<li>Revised <code>ElementPathControlManager</code> <code>updateRowSelection(for:at:)</code> by adopting the node-based technique used in showView() to accommodate outline view row numbering and click at any level.</li>
+<li>Note: still need to work on <code>ElementPathControlManager</code> <code>updateRowSelection(for:at:)</code> and add code to handle expansion of outline row.</li>
+<li>Saved a snapshot of build version 57.</li>
+<li>Commited Source Control.</li>
+</ul>
+<h2>
+<a name="h-2018-12-11-300-build-58-51" class="anchor" href="#h-2018-12-11-300-build-58-51"></a>2018-12-11 (3.0.0 build 58)</h2>
+<p>Finish implementing <code>OutlineTabItemViewController</code> and <code>ListTabItemViewController</code> methods to select a new element and to use the <code>outlineViewSelectionDidChange(_:)</code> and <code>tableViewSelectionDidChange(_:)</code> delegate methods only to handle data source update and path control display for mouse and keyboard row selection.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 58.</li>
+<li>Renamed the <code>ListTableView</code> class and all references to it to <code>ListTabItemTableView</code>.</li>
+<li>Renamed the <code>selectionDeclinesDisplay</code> flag to <code>selectionNeedsUpdate</code> and reversed the Boolean logic.</li>
+<li>Revised <code>ListTabItemTableView</code> to implement overrides of <code>NSResponder</code> <code>mouseDown(with:)</code> and <code>keyDown(with:)</code> and of the <code>NSStandardKeyBindingResponding</code> protocol methods <code>moveUp(_:)</code> and <code>moveDown(_:)</code>, to set the <code>selectionNeedsUpdate</code> flag to true when the user selects a new row using the mouse or keyboard.</li>
+<li>Created <code>OutlineTabItemOutlineView</code>, and revised it to implement overrides of <code>NSResponder</code> <code>mouseDown(with:)</code> and <code>keyDown(with:)</code> and of the <code>NSStandardKeyBindingResponding</code> protocol methods <code>moveUp(_:)</code> and <code>moveDown(_:)</code>, to set the <code>selectionNeedsUpdate</code> flag to true when the user selects a new row using the mouse or keyboard.</li>
+<li>Revised <code>ListTabItemViewController</code> <code>updateView()</code>, <code>showView()</code> and <code>clearView()</code> to set the <code>updateNeedsDisplay</code> and <code>selectionNeedsUpdate</code> flags before calls to <code>reloadData()</code> trigger the <code>tableViewSelectionDidChange(_:)</code> delegate method, and revised the <code>selectElement(_:)</code> and <code>selectElementWithContextMenu(_:) action methods to eliminate the unneeded second setting of the </code>selectionNeedsUpdate` flag.</li>
+<li>
+<code>RevisedOutlineTabItemViewController</code> <code>updateView()</code>, <code>showView()</code> and <code>clearView()</code> to set the <code>updateNeedsDisplay</code> and <code>selectionNeedsUpdate</code> flags before calls to <code>reloadData()</code> trigger the <code>outlineViewSelectionDidChange(_:)</code> delegate method, and revised the <code>selectElement(_:)</code> action method to eliminate the unneeded second setting of the <code>selectionNeedsUpdate</code> flag.</li>
+<li>Revised <code>OutlineTabItemViewController</code> datasource and delegate methods to use cleaner code.</li>
+<li>Revised <code>ListTabItemViewController</code> datasource method to use cleaner code.</li>
+<li>Saved a snapshot of build version 58.</li>
+<li>Commited Source Control.</li>
+</ul>
+<h2>
+<a name="h-2018-12-13-300-build-59-52" class="anchor" href="#h-2018-12-13-300-build-59-52"></a>2018-12-13 (3.0.0 build 59)</h2>
+<p>Continue fixing problems in <code>OutlineTabItemViewController</code>.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 59.</li>
+<li>Revised <code>ElementPathControlManager</code> <code>updateRowSelection(for:at:)</code> by renaming it <code>updateSelection(for pathControl: NSPathControl, atLevel selectedLevel: Int, index selectedIndex: Int)</code> and changing the code so it will work in outline view, where the level can be changed using the mouse or keyboard, as well as in list view, where it cannot.</li>
+<li>Revised the <code>OutlineTabItemViewController</code> <code>selectElement(_:)</code> action method.</li>
+<li>Revised <code>ElementDataModel</code> so it does not inherit from <code>NSObject</code>, and changed its initializer so it is not an override method.</li>
+<li>Saved a snapshot of build version 59.</li>
+<li>Commited Source Control.</li>
+</ul>
+<h2>
+<a name="h-2018-12-20-300-build-60-53" class="anchor" href="#h-2018-12-20-300-build-60-53"></a>2018-12-20 (3.0.0 build 60)</h2>
+<p>Fix the OutlineTabItemViewController selectElement(_<img src="https://forum.latenightsw.com/images/emoji/apple/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> action method.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 60.</li>
+<li>Revised the <code>OutlineTabItemViewController</code> <code>selectElement(_:)</code> action method by collapsing the outline before expanding the new selection path.</li>
+<li>Saved a snapshot of build version 60.</li>
+<li>Commited Source Control.</li>
+</ul>
+<h2>
+<a name="h-2018-12-21-300-build-61-54" class="anchor" href="#h-2018-12-21-300-build-61-54"></a>2018-12-21 (3.0.0 build 61)</h2>
+<p>Continue fixing problems in <code>OutlineTabItemViewController</code>.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 61.</li>
+<li>Revised <code>ElementDataModel</code> <code>childNode(ofParentNode:atChildIndex:)</code> method to return an empty node if the child nodes have not yet been added to the data model, so clients can use this to test whether the child nodes need to be added.</li>
+<li>Revised <code>OutlineTabItemViewController</code> by implementing the <code>outlineView(_:shouldExpandItem:)</code> <code>NSOutlineViewDelegate</code> method to update the data model by adding the child nodes to be displayed if necessary, by calling <code>ElementDataModel</code> <code>updateDataModelForExpandedElementAt(level:index:)</code>.</li>
+<li>Revised <code>ElementDataModel</code> by implementing the <code>updateDataModelForExpandedElementAt(level:index:)</code> method to add child nodes for display when an outline row is expanded.</li>
+<li>Revised <code>OutlineTabItemViewController</code> by changing <code>outlineView(_:shouldExpandItem:)</code> to <code>outlineViewItemWillExpand(_:)</code>.</li>
+<li>Saved a snapshot of build version 61.</li>
+<li>Commited Source Control.</li>
+</ul>
+<h2>
+<a name="h-2019-02-25-300-build-62-55" class="anchor" href="#h-2019-02-25-300-build-62-55"></a>2019-02-25 (3.0.0 build 62)</h2>
+<p>Finish fixing problems in <code>OutlineTabItemViewController</code>.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 62.</li>
+<li>Revised <code>OutlineTabItemViewController</code> <code>outlineViewSelectionDidChange(_:)</code> to collapse the current selection path and expand the new selected item.</li>
+<li>Revised <code>OutlineTabItemViewController</code> <code>outlineViewItemWillExpand(_:)</code> to collapse the current selection path and select the new expanded item.</li>
+<li>Revised ElementDataModel.swift by deleting <code>updateDataModelForExpandedElementAt(level:index:)</code>.</li>
+<li>Revised <code>BrowserTabItemViewController</code>, <code>OutlineTabItemViewController</code> and <code>ListItemViewController</code> by rewriting their respective <code>showView()</code> methods.</li>
+<li>Revised <code>OutlineTabItemViewController</code> <code>showView()</code>, <code>selectElement(_:)</code>, <code>outlineViewSelectionDidChange(_:)</code> to prevent call to <code>outlineViewItemWillExpand(_:)</code> delegate method.</li>
+<li>Saved a snapshot of build version 62.</li>
+<li>Commited Source Control.</li>
+</ul>
+<h2>
+<a name="h-2019-03-04-300-build-63-56" class="anchor" href="#h-2019-03-04-300-build-63-56"></a>2019-03-04 (3.0.0 build 63)</h2>
+<p>Implement <code>performIgnoringDelegate(_:with:)</code> to perform selector without triggering the receiver’s delegate method.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 63.</li>
+<li>Revised <code>OutlineTabItemViewController</code> by implementing <code>performIgnoringDelegate(_:with:)</code> and calling it in <code>popUpPathControlMenu(_:)</code> and <code>selectElement(_:)</code> to peform <code>expandItem(_:)</code>.</li>
+<li>Saved a snapshot of build version 63.</li>
+<li>Commited Source Control.</li>
+</ul>
+<h2>
+<a name="h-2019-03-07-300-build-64-57" class="anchor" href="#h-2019-03-07-300-build-64-57"></a>2019-03-07 (3.0.0 build 64)</h2>
+<p>Remove the <code>needsRestoreFromCache</code> flag in favor of <code>savedCurrentIndexPath</code> object.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 64.</li>
+<li>Revised ElementDataModel.swift by renaming private var <code>cachedCurrentIndexPath</code> to <code>savedCurrentElementIndexPath</code>.</li>
+<li>Renamed <code>cacheDataModel(_:)</code> to <code>saveCurrentElementIndexPath(_:)</code> and <code>restoreDataModel(_:)</code> to <code>restoreCurrentElementIndexPath(_:)</code> throughout.</li>
+<li>Changed <code>savedCurrentElementIndexPath</code> to an optional in order to use its nil value as a flag in place of the <code>needsRestoreFromCache</code> Boolean flag variable.</li>
+<li>Revised <code>restoreCurrentElementIndexPath</code> by setting <code>savedCurrentElementIndexPath</code> to nil at the end.</li>
+<li>Replaced all uses of the <code>needsRestoreFromCache</code> Boolean flag variable to testing the <code>savedCurrentElementIndexPath</code> for nil.</li>
+<li>Deleted the <code>needsRestoreFromCache</code> Boolean flag variable throughout.</li>
+<li>Saved a snapshot of build version 64.</li>
+<li>Commited Source Control.</li>
+</ul>
+<h2>
+<a name="h-2019-03-07-300-build-65-58" class="anchor" href="#h-2019-03-07-300-build-65-58"></a>2019-03-07 (3.0.0 build 65)</h2>
+<p>Rename the <code>selectionNeedsUpdate</code> flag to <code>isManualSelection</code> and simplify its use, and remove the updateNeedsDisplay flag because unused.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 65.</li>
+<li>Renamed selectionNeedsUpdate to isManualSelection throughout.</li>
+<li>Revised OutlineTabItemViewController and ListTabItemViewController by setting isManualSelection to false after testing it in the outlineViewSelectionDidChange(<em><img src="https://forum.latenightsw.com/images/emoji/apple/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> and tableViewSelectionDidChange(</em><img src="https://forum.latenightsw.com/images/emoji/apple/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> delegate methods.</li>
+<li>Deleted all other statements setting the isManualSelection flag to false.</li>
+<li>Deleted all references to the updateNeedsDisplay flag.</li>
+<li>Saved a snapshot of build version 65.</li>
+<li>Commited Source Control.</li>
+</ul>
+<p>2019-03-07 (3.0.0 build 66)<br>
+Scroll selected outline and table rows into view.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 66.</li>
+<li>Revised <code>ListTabItemViewController</code> <code>showView()</code>, <code>selectElement(_:)</code>, and <code>selectElementWithContextMenu(_:)</code> by calling <code>elementList.scrollRowToVisible()</code>.</li>
+<li>Revised <code>OutlineTabItemViewController</code> <code>showView()</code>, <code>selectElement(_:)</code>, and <code>outlineViewItemWillExpand(_:)</code> by calling <code>elementList.scrollRowToVisible()</code>.</li>
+<li>Saved a snapshot of build version 66.</li>
+<li>Commited Source Control.</li>
+</ul>
+<h2>
+<a name="h-2019-03-08-300-build-67-59" class="anchor" href="#h-2019-03-08-300-build-67-59"></a>2019-03-08 (3.0.0 build 67)</h2>
+<p>Add attribute columns to the list view.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 67.</li>
+<li>Revised the Main.storyboard List Tab Item View Controller Scene table view by making its first column narrower, setting the Columns count to 6, turning on Headers, setting Column Sizing to Uniform, turning on Alternating Rows, setting Vertical Grid to Solid, entering Header Titles “Role”, “Subrole”, “Index”, “Title”, “Type”, and “Help”, setting Size to Small, and revised each column by setting their identifiers to role, subrole, index, title, type, and help, turning off Editable, setting the min and max width of the Index column to 50, and setting the min and max width of each remaining column to 80 or 70, and setting the index column’s table view cell alignment to right aligned.</li>
+<li>Revised the <code>ListTabItemViewController</code> <code>tableView(_:viewFor:row:)</code> delegate method to display the contents of the new columns.</li>
+<li>Saved a snapshot of build version 67.</li>
+<li>Commited Source Control.</li>
+</ul>
+<h2>
+<a name="h-2019-03-09-300-build-68-60" class="anchor" href="#h-2019-03-09-300-build-68-60"></a>2019-03-09 (3.0.0 build 68)</h2>
+<p>Add attribute columns to the outline view.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 68.</li>
+<li>Revised the Main.storyboard Outline Tab Item View Controller Scene outline view by making its first column narrower, setting the Columns count to 6, turning on Headers, setting Column Sizing to Uniform, turning on Alternating Rows, setting Vertical Grid to Solid, entering Header Titles “Role”, “Subrole”, “Index”, “Title”, “Type”, and “Help”, setting Size to Small, and revised each column by setting their identifiers to role, subrole, index, title, type, and help, turning off Editable, setting the min and max width of the Index column to 50, and setting the min and max width of each remaining column to 80 or 70, and setting the index column’s table view cell alignment to right aligned.</li>
+<li>Revised the <code>OutlineTabItemViewController</code> <code>outlineView(_:viewFor:item:)</code> delegate method to display the contents of the new columns.</li>
+<li>Declared <code>OutlineTabItemViewController</code> <code>TableColumnIdentifiers</code> struct for use in the delegate method.</li>
+<li>Revised <code>ListTabItemViewController</code> by declaring the <code>TableColumnIdentifiers</code> struct and revising the <code>tableView(_:viewFor:row:)</code> delegate method for use in the delegate method.</li>
+<li>Saved a snapshot of build version 68.</li>
+<li>Commited Source Control.</li>
+</ul>
+<h2>
+<a name="h-2019-03-10-300-build-69-61" class="anchor" href="#h-2019-03-10-300-build-69-61"></a>2019-03-10 (3.0.0 build 69)</h2>
+<p>Conform the browser view controller to the outline and list view controllers.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 69.</li>
+<li>Revised <code>BrowserTabItemViewController</code> <code>showView()</code> to scroll the selected row to visible.</li>
+<li>Revised <code>BrowserTabItemViewController</code> <code>updateView()</code>, <code>showView()</code> and <code>clearView()</code> to scroll the last column into view instead of the selected column, so the selected column’s children will be visible.</li>
+<li>Revised <code>BrowserTabItemViewController</code> by deleting <code>browser(_:willDisplayCell:atRow:column:)</code>, <code>browserWillScroll(_:)</code> and <code>modifiedObjectValueForCell(_:atRow:column:)</code> because no longer needed.</li>
+<li>Revised <code>BrowserTabItemViewController</code> <code>browser(_:titleOfColumn:)</code> to add “—n children” instead of “(n)” at end of title</li>
+<li>Revised <code>ElementDataModel</code> <code>fullNaturalDescription(ofElement:atIndexPath:)</code> and <code>fullRawDescription(ofElement:atIndexPath:)</code>  to add only the index in parentheses at the end of the description, removing the level</li>
+<li>Saved a snapshot of build version 69.</li>
+<li>Commited Source Control.</li>
+</ul>
+<h2>
+<a name="h-2019-03-10-300-build-70-62" class="anchor" href="#h-2019-03-10-300-build-70-62"></a>2019-03-10 (3.0.0 build 70)</h2>
+<p>Add a path control to the browser view.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 70.</li>
+<li>Revised Main.storyboard Browser Tab Item View Controller Scene by lowering the top of the browser view, adding a path control from the library, adding constraints to all 4 sides and adding a Height constraint of 20 and setting the Placeholder to “No Target”.</li>
+<li>Revised all 3 Main.storyboard Tab Item View Controller Scenes by setting the path control background color to Control Background Color.</li>
+<li>Revised <code>BrowserTabItemViewController</code> <code>viewDidLoad()</code> by setting the background color of the browser view title area to <code>controlBackgroundColor</code> to match the header cell background color of the outline and list views.</li>
+<li>Revised <code>BrowserTabItemViewController</code> by adding an <code>elementPathControlManager</code> instance variable and creating the path control.</li>
+<li>Revised <code>BrowserTabItemViewController</code> by adding a <code>browserPathControl</code> outlet and connecting it in Main.storyboard.</li>
+<li>Revised <code>BrowserTabItemViewController</code> <code>viewDidLoad()</code> by setting the font of the path control to smallSystemFontSize for the placeholder.</li>
+<li>Revised <code>BrowserTabItemViewController</code> <code>updateView()</code>, <code>showView()</code> and <code>clearView()</code> adding code to update the path control.</li>
+<li>Revised <code>BrowserTabItemViewController</code> by adding a <code>popUpPathControlMenu(_:)</code> action method and connecting it to first responder in Main.storyboard.</li>
+<li>Revised <code>MasterSplitItemViewController</code> <code>currentTabItemSelectElementAction()</code> by implementing the switch case for the browser view.</li>
+<li>Revised <code>BrowserTabItemViewController</code> <code>selectElement(_:)</code> by changing its sender parameter type to Any and adding branch tests to distinguish between browser and path control menu item.</li>
+<li>Revised Main.storyboard by connecting <code>popUpPathControlMenu(_:)</code> action method to Browser Tab Item View Controller Scene path control.</li>
+<li>Revised <code>BrowserTabItemViewController</code> <code>selectElement(_:)</code> by filling in the menu item branch.</li>
+<li>Revised the <code>BrowserTabItemViewController</code> <code>browser(_:numberOfChildrenOfItem:)</code>, <code>browser(_:child:ofItem:)</code>, <code>browser(_:isLeafItem:)</code> and <code>browser(_:objectValueForItem:)</code> delegate methods to use the better code model in <code>OutlineTabItemViewController</code>.</li>
+<li>Revised <code>BrowserTabItemViewController</code>, <code>outlineTabItemViewController</code> and Revised <code>listTabItemViewController</code> <code>selectElement(_:)</code> methods and <code>listTabItemViewController</code> <code>selectElementWithContextMenu(_:)</code> to call <code>showView()</code> once the data model is updated.</li>
+<li>Revised <code>BrowserTabItemViewController</code>, <code>outlineTabItemViewController</code> and Revised <code>listTabItemViewController</code> <code>viewDidLoad()</code> to set the path control placeholder text attributes.</li>
+<li>Revised all 3 Main.storyboard Tab Item View Controller Scenes by setting the path control’s Focus Ring to None.</li>
+<li>Saved a snapshot of build version 70.</li>
+<li>Commited Source Control.</li>
+</ul>
+<h2>
+<a name="h-2019-03-14-300-build-71-63" class="anchor" href="#h-2019-03-14-300-build-71-63"></a>2019-03-14 (3.0.0 build 71)</h2>
+<p>Implement application icon and Credits for About box.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 71.</li>
+<li>Built and archived as executable release a1 for testing by Michael Tsai.</li>
+<li>Updated Info.plist Copyright (human-readable) to end in 2019.</li>
+<li>Updated InfoPlist.strings <code>NSHumanReadableCopyright</code> to end in 2019.</li>
+<li>Revised Main.storyboard by rearranging the application menu to include Check for Updates… menu, License menu, Registration menu with Online Store and Enter Key… submenus, and System Preferences… menu.</li>
+<li>Revised Assets.xcassets by adding wide appicon png images to the AppIcon to form working application icon for application and About box Credits file.</li>
+<li>Added Credits.rtf file from UI Browser 2.9.0 and revised text.</li>
+<li>Saved a snapshot of build version 71.</li>
+<li>Commited Source Control.</li>
+</ul>
+<h2>
+<a name="h-2019-03-21-300-build-72-64" class="anchor" href="#h-2019-03-21-300-build-72-64"></a>2019-03-21 (3.0.0 build 72)</h2>
+<p>Clean up authorizing access with System Preferences menu item.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 72.</li>
+<li>Revised Main.storyboard by renaming UI Browser &gt; System Preferences… menu item to Accessibility List…</li>
+<li>Revised AppDelegate by implementing the <code>openAccessibilityList(_:)</code> action method and connecting it to the UI Browser &gt; Accessibility List… menu item.</li>
+<li>Revised Main.storyboard by fixing Accessibility checkbox to Check and Switch.</li>
+<li>Moved development to macOS 10.14.4 Mojave and Xcode 10.2.</li>
+<li>Built and ran successfully.</li>
+<li>Saved a snapshot of build version 72.</li>
+<li>Commited Source Control.</li>
+</ul>
+<h2>
+<a name="h-2019-03-26-300-build-73-65" class="anchor" href="#h-2019-03-26-300-build-73-65"></a>2019-03-26 (3.0.0 build 73)</h2>
+<p>Convert to Swift 5.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 73.</li>
+<li>Add ListTabItemTableView.swift to Source Control.</li>
+<li>Validated project settings and migrated localization from “English.lproj”.</li>
+<li>Committed Source Control</li>
+<li>Converted the Target to Current Swift Syntax (Swift 5) – no source changes required.</li>
+<li>Revised <code>MainContentViewController</code> (in TargetMenuExtension.swift) by adding an <span class="mention">@unknown</span> default case to the switch statement in <code>updateTargetMenu(_:)</code> at recommendation of compiler.</li>
+<li>Changed the Project’s Swift Compiler - Language (Swift Language Version or SWIFT_VERSION) to Swift 5.</li>
+<li>Built and ran successfully.</li>
+<li>Saved a snapshot of build version 73.</li>
+<li>Commited Source Control.</li>
+</ul>
+<h2>
+<a name="h-2019-03-27-300-build-74-66" class="anchor" href="#h-2019-03-27-300-build-74-66"></a>2019-03-27 (3.0.0 build 74)</h2>
+<p>Move handling of main window’s toolbar into the ToolbarExtension and other extensions on <code>MainWindowController</code> from <code>MainContentViewController</code>.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 74.</li>
+<li>Created ToolbarExtension.swift as an extension on <code>MainWindowController</code>.</li>
+<li>Revised <code>TargetMenuExtension</code>, <code>ActivateButtonExtension</code>, <code>AccessibilityCheckboxExtension</code> and <code>DetailButtonExtension</code> by making them extensions on <code>MainWindowController</code> instead of <code>MainContentViewController</code>.</li>
+<li>Revised <code>MainContentViewController</code> by moving the <code>didChangeAccessStatus(_:)</code> notification method in from TargetMenuExtension.swift, and by revising <code>viewDidLoad()</code> accordingly.</li>
+<li>Revised <code>MainWindowController</code> by moving the <code>targetPopUpButton</code> configuration code into <code>windowDidLoad()</code> from <code>MainContentViewController</code> <code>viewWillAppear()</code>.</li>
+<li>Revised <code>MainContentViewController</code> <code>updateApplication(forNewTarget:usingTargetElement:)</code> by updating the call to <code>updateWindowTitle()</code> which was moved to <code>MainWindowController</code>.</li>
+<li>Revised TargetMenuExtension.swift throughout by revising references to properties and methods in <code>MainContentViewController</code> to accommodate making <code>TargetMenuExtension</code> an extension on <code>MainWindowController</code> instead of <code>MainContentViewController</code>.</li>
+<li>Revised AppDelegate <code>menuNeedsUpdate(_:)</code> to set var controller to MainWindowController.sharedInstance.</li>
+<li>Revised Main.storyboard by changing the toolbar items’ view classes from <code>ValidatedButton</code> back to their original <code>NSButton</code> or <code>NSPopUpButton</code>.</li>
+<li>Revised <code>MainContentViewController</code> by declaring the <code>mainwindowController</code> instance property, setting it lazily, and substituting it for <code>MainWindowController.sharedInstance</code> throughout.</li>
+<li>Revised <code>MainWindowController</code> and its extensions by declaring the <code>mainContentVewController</code> instance property, setting it lazily, and substituting it for <code>MainContentViewController.sharedInstance</code> throughout.</li>
+<li>Revised Main.storyboard by making Accessibility button Bordered to give it white background color with rounded edges to match toolbar item user interface guidelines.</li>
+<li>Revised <code>DetailButtonExtension</code> of <code>MainWindowController</code> by removing the <code>setDetailButtonColor()</code> method, and revised <code>MainContentViewController</code> by removing the call to <code>setDetailButtonColor()</code> from the <code>systemTinitDidChange(_:)</code> notification method, so that the Detail button can display a simple disclosure button with a chevron instead of the detail toggle images in Assets.xcassets</li>
+<li>Revised Main.storyboard by making Detail button a Disclosure On Off button Bordered to give it a white background color with rounded edges to match toolbar item user interface guidelines.</li>
+<li>Revised <code>DetailButtonExtension</code> of <code>MainWindowController</code> by rewriting the <code>toggleDetailSplitItem(_:)</code> action method to expand or collapse the detail split view item based on the current state of the button instead of simply toggling it.</li>
+<li>Revised Main.storyboard by moving Float checkbox from main content view to right end of toolbar left of Detail button and making it a Push On Push Off button.</li>
+<li>Revised Main.storyboard by moving Accessibility checkbox from right to center of toolbar and setting its title to Allow Access… (to be changed to Deny Access… with validation).</li>
+<li>Revised Main.storyboard by renaming application menu’s Accessibility List… menu item to Set Access…</li>
+<li>Revised Main.storyboard by removing View &gt; Customize Toolbar… menu item.</li>
+<li>Revised <code>ElementDataModel</code> <code>updateDataModel(forSystemWideElement:)</code> by adding call at end to <code>updateDataModelForCurrentElementAt(leel: 0, index: 0)</code> on model of <code>updateDataModel(forApplicationElement:)</code>. [IS THIS NEEDED?]</li>
+<li>Revised <code>MainContentViewController</code> <code>updateApplication(forNewTarget:usingTargetElement:)</code> by adding code to set the <code>currentElementData</code> instance property to display the Target menu’s title and the window’s title when the SystemWide target is chosen.</li>
+<li>Revised <code>MainWindowController</code> (in TargetMenuExtension.swift) <code>updateTargetPopUpButtonTitle()</code> and <code>updateWindowTitle()</code> to display the Target menu’s title and the window’s title when the SystemWide target is chosen.</li>
+<li>Revised Main.storyboard by reorganizing and rewording the View menu in the menubar and adding Activate Target, Expand Detail View and Show Keystroke menu items to the menu bar’s View menu, and by adding a Report button to the master split item view.</li>
+<li>Revised <code>MainWindowController</code> by declaring that it conforms to <code>NSMenuDelegate</code>, and removed declaration of conformance from <code>MainContentViewController</code>.</li>
+<li>Revised <code>MainWindowController</code> <code>windowDidLoad()</code> to declare <code>MainWindowController</code> as the delegate of <code>targetPopUpButton</code>, so the <code>menuDidClose(_:)</code> delegate method (in TargetMenuExtension.swift) is called if access is disabled.</li>
+<li>Removed AppDelegate <code>menuDidClose(_:)</code> delegate method because it gets called while the request access alert is already open or after it is dismissed for unknown reasons, causing duplicate alerts. The <code>MainWindowController</code> (in TargetMenuExtension.swift) <code>menuDidClose(_:)</code> delegate method is still used because it works properly.</li>
+<li>Built and ran successfully.</li>
+<li>Saved a snapshot of build version 74.</li>
+<li>Commited Source Control.</li>
+</ul>
+<h2>
+<a name="h-2019-04-14-300-build-75-67" class="anchor" href="#h-2019-04-14-300-build-75-67"></a>2019-04-14 (3.0.0 build 75)</h2>
+<p>Implement toolbar item validation.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 75.</li>
+<li>Revised <code>MainWindowController</code> (in ActivateButtonExtension.swift) by removing feedback from the <code>activateTarget(_:)</code> action method.</li>
+<li>Revised ToolbarExtension.swift by renaming it MainToolbarItem.swift, and by implementing the <code>MainToolbarItem</code> subclass of <code>NSToolbarItem</code> and overriding <code>validate()</code>, which is called automatically because its Autovalidates setting in Main.storyboard is on by default.</li>
+<li>Revised Main.storyboard by setting the class of the Target, Activate, Accessibility, _______ toolbar items to MainToolbarItem, and by setting the tags of all of the toolbar items.</li>
+<li>Revised AccessibilityCheckboxExtension.swift by renaming it AccessibilityButtonExtension.swift.</li>
+<li>Revised MainWindowController by adding the floatButton IBOutlet and connecting it in Main.storyboard.</li>
+<li>Revised <code>MasterSplitItemViewController</code> by deleting the floatButton IBOutlet, and revised Main.storyboard by removing the Float checkbox.</li>
+<li>Built and ran successfully.</li>
+<li>Saved a snapshot of build version 75.</li>
+<li>Commited Source Control.</li>
+</ul>
+<h2>
+<a name="h-2019-04-14-300-build-76-68" class="anchor" href="#h-2019-04-14-300-build-76-68"></a>2019-04-14 (3.0.0 build 76)</h2>
+<p>Clean up implementation of the <code>NSUserInterfaceValidations</code> and <code>NSValidatedUserInterfaceItem</code> protocols for the reportButton.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 76.</li>
+<li>Revised MasterSplitItemViewController by declaring the reportButton IBOutlet, connected it in Main.storyboard, and set its class to ValidatedButton in Main.storyboard.</li>
+<li>Created new file ReportButtonExtension.swift, implemented the ReportButton extension on <code>MainContentViewController</code>, implemented a temporary dummy <code>showReport(_:)</code> action method, and connected it in Main.storyboard.</li>
+<li>Created new file ValidatedControlProtocol.swift, and implemented the ValidatedControl subprotocol of <code>NSValidatedUserInterfaceItem</code> and the ValidatedButton subclass of NSButton, conforming it to ValidatedControl by implementing the <code>validate()</code> protocol method.</li>
+<li>Revised <code>MainContentViewController</code> by revising implementations of <code>updateValidatedControls()</code> and <code>validateUserInterfaceItem(_:)</code> to work with the new reportButton action.</li>
+<li>Built and ran successfully.</li>
+<li>Saved a snapshot of build version 76.</li>
+<li>Commited Source Control.</li>
+</ul>
+<h2>
+<a name="h-2019-04-16-300-build-77-69" class="anchor" href="#h-2019-04-16-300-build-77-69"></a>2019-04-16 (3.0.0 build 77)</h2>
+<p>Implemented the <code>UserControlValidations</code> subprotocol of <code>NSUserInterfaceValidations</code> and the <code>ValidatedUserControlItem</code> protocol and applied them to the reportButton.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 77.</li>
+<li>Revised <code>MainContentViewController</code> by renaming the <code>validateControls()</code> method as <code>validateUserControls()</code> and revised <code>MainWindowController</code> <code>windowDidUpdate(_:)</code> to call it by its new name.</li>
+<li>Renamed the ValidatedControlProtocol.swift file as UserControlValidations.swift, and changed the required <code>UserControlValidations</code> protocol method from <code>validate()</code> to <code>validateUserControl(_ item: NSControl)</code> → Bool.</li>
+<li>Revised UserControlValidations.swift by renaming the <code>ValidatedUserControl</code> protocol as <code>ValidatedUserControlItem</code>, and by changing the required <code>ValidatedUserControlItem</code> protocol method from <code>validate()</code> to <code>update()</code> (in addition to the action and target methods required by the parent <code>NSUserInterfaceValidations</code> protocol).</li>
+<li>Revised <code>MainContentViewController</code> by declaring conformance to the <code>UserControlValidations</code> protocol and removing conformance to the <code>NSUserInterfaceValidations</code> protocol.</li>
+<li>Revised <code>MainContentViewController</code> <code>validateUserControls()</code> to call the renamed <code>update()</code> method on <code>MasterSplitItemViewController</code> views that conform to the <code>ValidatedUserControlItem</code> protocol.</li>
+<li>Revised <code>MainContentViewController</code> by calling <code>validateUserControl(_:)</code> instead of <code>validateUserInterfaceItem(_:)</code>.</li>
+<li>Revised UserControlValidations.Swift validatedButton update() method to call <code>MainContentViewController</code> <code>validateUserControl(_:)</code>, and to call <code>validateUserInterfaceItem(_:)</code> in case any user controls implement it.</li>
+<li>Revised ReportButtonExtension.swift to declare an extension on <code>MasterSplitItemViewController</code> instead of <code>MainContentViewController</code> for the <code>showReport(_:)</code> action method.</li>
+<li>Revised MasterSplitItemViewController.swift by moving the <code>validateUserControlItem(_:)</code> validation method in from <code>MainContentViewController</code> and declaring it as conforming to the <code>UserControlValidations</code> protocol.</li>
+<li>Revised Main.storyboard by setting the class of the Report button to NSButton instead of ValidatedButton.</li>
+<li>Built and ran successfully.</li>
+<li>Saved a snapshot of build version 77.</li>
+<li>Commited Source Control.</li>
+</ul>
+<h2>
+<a name="h-2019-04-17-300-build-78-70" class="anchor" href="#h-2019-04-17-300-build-78-70"></a>2019-04-17 (3.0.0 build 78)</h2>
+<p>Applied the <code>UserControlValidations</code> subprotocol of <code>NSUserInterfaceValidations</code> and the <code>ValidatedUserControlItem</code> protocol and applied them to the remaining user controls in the master split view item controller.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 78.</li>
+<li>Moved development to Xcode 10.2.1.</li>
+<li>Revised <code>UserControlValidations</code> <code>ValidatedButton</code> to implement an override of <code>awakeFromNib()</code> to observe <code>NSWindow.didUpdateNotification</code> on the model of Erik M. Buck and Donald A. Yacktman, “Cocoa Design Patterns” (Addison Wesley 2010), pp. 228-29, revised <code>MainWindowController</code> by removing the <code>windowDidUpdate(_:)</code> delegate method and <code>MainContentViewController</code> by removing the <code>validateUserControls()</code> method because they are no longer needed to trigger validation.</li>
+<li>Revised UserControlValidations.swift by renaming it UserControlValidation.swift and going back to declaring <code>validatedButton</code> as a subclass of NSButton instead of an extension, and revised Main.storyboard to set the class of NSButton controls in the master split item view to ValidatedButton, to make it possible to limit the Buck-Yacktman technique to buttons in the window’s content view.</li>
+<li>Revised UserControlValidation.swift by implementing a <code>ValidatedPopUpButton</code> subclass of NSPopUpButton, and revised Main.storyboard to set the class of NSPopUpButton controls in the master split item view to <code>ValidatedPopUpButton</code>.</li>
+<li>Revised <code>MasterSplitItemViewController</code> by removing the <code>refreshApplication(_:)</code> action method in anticipation of reimplementing it in RefreshApplicationButtonExtension.swift.</li>
+<li>Renamed <code>AppleScriptPopDownButton</code> as <code>AppleScriptPullDownButton</code> throughout.</li>
+<li>Created extension files with stub action methods for the remaining user controls in the master split view item controller, and connected them in Main.storyboard: <code>HighlightCheckboxExtension</code>, <code>FollowFocusCheckboxExtension</code>, <code>ScreenReaderButtonExtension</code>, <code>AppleScriptButtonExtension</code>, <code>MasterTabViewSelectorExtension</code>, <code>RefreshApplicationButtonExtension</code>, <code>KeyStrokesButtonExtension</code> and <code>TerminologyButtonExtension</code>.</li>
+<li>Revised <code>MasterSplitItemViewController</code> <code>validateUserControlItem(_:)</code> by adding cases for all of the new action methods in the master split view item controller.</li>
+<li>Revised Main.storyboard to set the Enabled setting of those user controls in the main split item view that need to be disabled when a window first open with No Target selected.</li>
+<li>Revised the <code>MainContentViewController</code> <code>didChangeAccessStatus(_:)</code> notification method by adding a call to <code>setWindowsNeedUpdate()</code> to trigger validation when access is changed in System Preferences or elsewhere behind the back of UI Browser.</li>
+<li>Revised AccessButtonExtension.swift to make UI Browser stay active after dismissing an access changed sheet by registering to observe the <code>AccessAuthorizer</code> <code>didDismissAccessAlertNotification</code>.</li>
+<li>Revised AppDelegate <code>applicationWillFinishLaunching(_:)</code> by duplicating codes in AccessButtonExtension.swift to terminate System Preferences after the user grants or denies access.</li>
+<li>Built and ran successfully.</li>
+<li>Saved a snapshot of build version 78.</li>
+<li>Commited Source Control.</li>
+</ul>
+<h2>
+<a name="h-2019-04-22-300-build-79-71" class="anchor" href="#h-2019-04-22-300-build-79-71"></a>2019-04-22 (3.0.0 build 79)</h2>
+<p>Fully implement the NSMenuItemValidation protocol for the toolbar items’ corresponding menu items.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 79.</li>
+<li>Revised <code>MainWindowController</code> by imiplementing the <code>validateMenuItem(_:)</code> <code>NSMenuItemValidation</code> protocol method for the UI Browser &gt; Grant Access menu item and declared that <code>MainWindowController</code> conforms to the <code>NSMenuItemValidation</code> protocol.</li>
+<li>Revised Main.storyboard by connecting the UI Browser &gt; Grant Access menu item to First Responder for the <code>toggleAccess(_:)</code> action method.</li>
+<li>Revised TargetMenuExtension.swift <code>updateTargetMenu(_:)</code> by adding code for the new Activate Target menu item, and revised Defines.swift to declare the <code>ACTIVATE_TARGET_MENU_ITEM_TITLE</code> constant.</li>
+<li>Revised ActivateButtonExtension.swift by revising the <code>activateTarget(_:)</code> action method to restore the menu item’s title to the current target application if the user chose the Target pop-up button’s Activate Target menu item.</li>
+<li>Revised Main.storyboard by removing the View &gt; Activate Target menu item.</li>
+<li>Revised MainWindow.swift by making MainWindow a subclass of NSPanel so it can float.</li>
+<li>Created FloatButtonExtension.swift as an extension on <code>MainWindowController</code>, implemented the <code>float(_:)</code> action method, and revised Main.storyboard by connecting the <code>float(_:)</code> action method to the Float button and the Window &gt; Float menu item.</li>
+<li>Revised <code>MainWindowController</code> <code>validateMenuItem(_:)</code> to set the state of the Window &gt; Float menu item based on whether the window is floating.</li>
+<li>Revised the MainToolbarItem.swift validate() method to add a case for the float button to set its state based on whether the window is floating, and revised Main.storyboard to make the floating button a MainToolbarItem and set its tag to 3.</li>
+<li>renamed MailToolbarItem.swift as ValidatedToolbarItem.swift and renamed the subclass ValidatedToolbarItem.</li>
+<li>Revised AppDelegate <code>applicationWillFinishLaunching(_:)</code> by calling <code>AccessAuthorizer</code>’s designated intializer instead of its convenience initializer, since making UI Browser’s main window a subclass of NSPanel forces AccessAuthorizer to present application-modal dialogs instead of document-modal sheets anyway.</li>
+<li>Revised Main.storyboard to make the split view’s divider thin instead of thick because it looks better.</li>
+<li>Built and ran successfully.</li>
+<li>Saved a snapshot of build version 79.</li>
+<li>Commited Source Control.</li>
+</ul>
+<h2>
+<a name="h-2019-04-25-300-build-80-72" class="anchor" href="#h-2019-04-25-300-build-80-72"></a>2019-04-25 (3.0.0 build 80)</h2>
+<p>Begin implementing the Outline view.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 80.</li>
+<li>Revised the FloatButtonExtension.swift <code>float(_:)</code> action method to set <code>isFloatingPanel</code> based on the state of the button instead of just toggling <code>isFloatingPanel</code>.</li>
+<li>Revised the HighlightCheckboxExtension.swift <code>highlight(_:)</code> action method to set…</li>
+<li>Saved a snapshot of build version 80.</li>
+</ul>
+<p>WORK INTERRUPTED TO COMPLETE UI Browser 2 2.9.0 for macOS Catalina 10.15.</p>
+<h2>
+<a name="h-2019-10-27-300-build-81-73" class="anchor" href="#h-2019-10-27-300-build-81-73"></a>2019-10-27 (3.0.0 build 81)</h2>
+<p>Set size of element browser to small programmatically, and remove <code>NSBrowser+PFSmallBrowserAdditions</code> Objective-C category.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 81.</li>
+<li>Moved development to macOS Catalina 10.15.0 (19A602) and Xcode 11.1 (11A1027).</li>
+<li>Allowed Xcode to switch to development signing and enable hardened runtime.</li>
+<li>Removed UIBrowser3-Bridging-Header.h and NSBrowser+PFSmallBrowserAdditions.h and .m Objective-C category files, because direct access to instance variables was deprecated in macOS Mojave 10.14. Apple announced in 2018 that it would block all use of private instance variables in a future release of macOS, and access was blocked in macOS Catalina 10.15; see my bug report 41209462 2018-06-18, now closed.</li>
+<li>Revised <code>BrowserTabItemViewController.viewDidLoad()</code> by deleting calls to the NSBrowser+PFSmallBrowserAdditions category’s <code>pfSetUsesSmallHorizontalScroller()</code>, pfSetUsesSmallColumnScrollers and <code>pfSetUsesSmallTitleFont()</code> methods.</li>
+<li>Revised <code>BrowserTabItemViewController.viewDidLoad()</code> by adding code setting elementBrowser’s <code>controlSize</code> to .small programmatically. Interface Builder still automatically switches back to Regular when attempting to set Size to Small or Mini.</li>
+<li>Saved a snapshot of build version 81.</li>
+<li>Commited Source Control.</li>
+</ul>
+<h2>
+<a name="h-2019-10-27-300-build-82-74" class="anchor" href="#h-2019-10-27-300-build-82-74"></a>2019-10-27 (3.0.0 build 82)</h2>
+<p>Move development to Swift 5.1.</p>
+<ul>
+<li>Moved development to macOS Catalina 10.15.0 (19A602), Xcode 11.2 (11A1027) and Swift 5.1.</li>
+<li>Changed the Project’s Deployment (macOS Deployment Target or <code>MACOSX_DEPLOYMENT_TARGET</code>) to macOS 10.15.</li>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 82.</li>
+<li>Changed the Project’s Versioning (Versioning System or VERSIONING_SYSTEM) to Apple Generic to match frameworks.</li>
+<li>Revised Credits.rtf by referring to the “cursor” instead of the “mouse”, by referring to macOS 10.15 as “Catalina”, and by stating that UI Browser requires macOS Catalina 10.15.</li>
+<li>Moved development to macOS Catalina 10.15.1 (19B88), Xcode 11.2 (11B52) and Swift 5.1.</li>
+<li>Moved development to Xcode 11.2.1 (11B500) and Swift 5.1.2.</li>
+<li>Moved development to macOS Catalina 10.15.2 (19C57), Xcode 11.3 (11C29) and Swift 5.1.3.</li>
+<li>Moved development to macOS Catalina 10.15.3 (19D76), Xcode 11.3.1 (11C505) and Swift 5.1.3.</li>
+<li>Changed copyright notices throughout to cover “-2020”.</li>
+<li>Built and ran successfully.</li>
+<li>Saved a snapshot of build version 82.</li>
+<li>Commited Source Control.</li>
+</ul>
+<h2>
+<a name="h-2020-02-17-300-build-83-75" class="anchor" href="#h-2020-02-17-300-build-83-75"></a>2020-02-17 (3.0.0 build 83)</h2>
+<p>Embed new framework versions supporting Swift 5.1 module stability and library evolution to facilitate eventual distribution of the built frameworks for use by developers of client applications or frameworks using different versions of Swift.</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 83.</li>
+<li>Incorporated PFAssistiveFramework4 4.0.0.17 and PFAccessibilityAuthorizer2 2.0.0.8.</li>
+<li>Built and ran successfully.</li>
+<li>Saved a snapshot of build version 83.</li>
+<li>Commited Source Control.</li>
+</ul>
+<p>#<span class="hashtag">#2020-02-27</span> (3.0.0 build 84)<br>
+???</p>
+<ul>
+<li>Changed the Project’s Versioning (Current Project Version or <code>CURRENT_PROJECT_VERSION</code>) to 84.</li>
+</ul>
+<h2>
+<a name="issues-76" class="anchor" href="#issues-76"></a>ISSUES:</h2>
+<ul>
+<li>Detail Toggle Button in Toolbar does not toggle in response to dragging Detail Split Item collapsed or revealed. See builds 32, 39 and 74. It is named <code>detailToggleButton</code> where the color is set, but detailButton everywhere else. See MainSplitViewController: “A button can be bound to the isCollapsed property to collapse and reveal a split view, and a suitable bound detail button’s state can change automatically when the split view is collapsed and revealed by dragging.” Figure out how to do this when the button is a toolbar item in the toolbar.</li>
+<li>Needs a minimum size.</li>
+<li>Michael Tsai encountered a problem where arrow-selecting and click-selecting both failed to auto-expand.</li>
+<li>Try to remove auto-collapse so outline view can be full powered.</li>
+<li>Implement multiple windows for different targets.
+<ul>
+<li>try instantiating completely separate data model for each.</li>
+</ul>
+</li>
+<li>Check AppleScript support in macOS 15 (/System/Library/Frameworks/Scripting.framework and /System/Library/Frameworks/AppKitScripting.framework are still 32-bit in Mojave).</li>
+<li>Explore compliance with VoiceOver, Dynamic Type and other accessibility technologies.</li>
+<li>Update to latest Paddle Framework (in Cocoa/eCommerce Registration Services/Paddle).</li>
+</ul>
+        </div>
+
+        <meta itemprop='headline' content='UI Browser 4 4.0.0 Change Log'>
+          <meta itemprop='keywords' content='documentation, ui-browser-4'>
+
+        <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+           <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+           <meta itemprop="userInteractionCount" content="1" />
+           <span class='post-likes'>1 Like</span>
+         </div>
+
+         <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+            <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+            <meta itemprop="userInteractionCount" content="0" />
+          </div>
+
+            <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://forum.latenightsw.com/t/ui-browser-4-documents/4065" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://forum.latenightsw.com/t/ui-browser-4-documents/4065'>
+                      <span itemprop='name'>UI Browser 4 Documents</span>
+                    </a>
+                    <meta itemprop='position' content='4'>
+                  </div>
+            </div>
+      </div>
+
+
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/tos' itemprop="url">Terms of Service </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/privacy' itemprop="url">Privacy Policy </a>
+        </span>
+      </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    <a rel="me" href="https://mstdn.ca/@alldritt">Mastodon</a>
+  </body>
+  
+</html>

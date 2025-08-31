@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>UI Browser 3 Original Tasks - UI Browser - Late Night Software Ltd.</title>
+    <meta name="description" content="Continuing the discussion from UI Browser Documents: 
+
+GOALS
+
+Rewrite UI Browser in Swift 5 as 3.0.0
+
+
+APPROACH
+
+Outline and rank UI Browser features to implement (see Specifications folder)
+
+Goal is fastest route to a u&amp;hellip;">
+    <meta name="generator" content="Discourse 2.9.0.beta14 - https://github.com/discourse/discourse version 30e7b716b0abb2273086b3013e0da503f03c4679">
+<link rel="icon" type="image/png" href="https://forum.latenightsw.com/uploads/default/optimized/1X/8d61be2b3df1a0f8a3ff4c2735336db67573579e_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://forum.latenightsw.com/uploads/default/optimized/1X/1e7f2ed7fb94bd744bd472a3c9dc6a0106e92ba8_2_180x180.png">
+<meta name="theme-color" media="all" content="#ffffff">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="https://forum.latenightsw.com/t/ui-browser-3-original-tasks/4070" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://forum.latenightsw.com/opensearch.xml" title="Late Night Software Ltd. Search">
+
+    <link href="/stylesheets/color_definitions_light_2_4_526de384aaf63d42e089c418db1d3409079d99c3.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="/stylesheets/desktop_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="/stylesheets/chat_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="chat"  />
+  <link href="/stylesheets/discourse-chat-integration_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="discourse-chat-integration"  />
+  <link href="/stylesheets/discourse-details_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="/stylesheets/discourse-docs_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="discourse-docs"  />
+  <link href="/stylesheets/discourse-local-dates_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="/stylesheets/discourse-narrative-bot_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="/stylesheets/discourse-presence_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="/stylesheets/discourse-solved_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="discourse-solved"  />
+  <link href="/stylesheets/discourse-user-notes_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="discourse-user-notes"  />
+  <link href="/stylesheets/discourse-whos-online_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="discourse-whos-online"  />
+  <link href="/stylesheets/lazy-yt_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="lazy-yt"  />
+  <link href="/stylesheets/poll_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="/stylesheets/chat_desktop_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="chat_desktop"  />
+  <link href="/stylesheets/poll_desktop_b2e7c9ed247f99107fb5a30841d745c204f652ab.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/desktop_theme_14_02e5e18113bb72c3cf9db463989c04be49304f7c.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="14" data-theme-name="discotoc"/>
+<link href="/stylesheets/desktop_theme_4_2f2f3144f30380742fa14f52ece149d405bec066.css?__ws=forum.latenightsw.com" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="4" data-theme-name="lns light"/>
+
+    
+    <meta id="data-ga-universal-analytics" data-tracking-code="UA-93638231-2" data-json="{&quot;cookieDomain&quot;:&quot;forum.latenightsw.com&quot;}" data-auto-link-domains="">
+
+  <link rel="preload" href="/assets/google-universal-analytics-v3-4195304cc8fc9564a86cfaf637f43e2582acbb938c5f563f03b3c967c4bf07a4.js" as="script">
+<script defer src="/assets/google-universal-analytics-v3-4195304cc8fc9564a86cfaf637f43e2582acbb938c5f563f03b3c967c4bf07a4.js"></script>
+
+
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;UI Browser 3 Original Tasks&#39;" href="https://forum.latenightsw.com/t/ui-browser-3-original-tasks/4070.rss" />
+    <meta property="og:site_name" content="Late Night Software Ltd." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.latenightsw.com/uploads/default/original/2X/9/96ad8114deff100522ea5b3ec2ae32c5f995f0fa.png" />
+<meta property="og:image" content="https://forum.latenightsw.com/uploads/default/original/2X/9/96ad8114deff100522ea5b3ec2ae32c5f995f0fa.png" />
+<meta property="og:url" content="https://forum.latenightsw.com/t/ui-browser-3-original-tasks/4070" />
+<meta name="twitter:url" content="https://forum.latenightsw.com/t/ui-browser-3-original-tasks/4070" />
+<meta property="og:title" content="UI Browser 3 Original Tasks" />
+<meta name="twitter:title" content="UI Browser 3 Original Tasks" />
+<meta property="og:description" content="Continuing the discussion from UI Browser Documents:   GOALS  Rewrite UI Browser in Swift 5 as 3.0.0   APPROACH  Outline and rank UI Browser features to implement (see Specifications folder)  Goal is fastest route to a useful first release version Map out features to add in subsequent release versions   Set up Markup documentation Set up Git and GitHub in Xcode Install and set up Playgrounds Set up Unit Tests Set up UI Tests Read Swift 5 Apple documentation Watch Swift 5 videos and older   DONE ..." />
+<meta name="twitter:description" content="Continuing the discussion from UI Browser Documents:   GOALS  Rewrite UI Browser in Swift 5 as 3.0.0   APPROACH  Outline and rank UI Browser features to implement (see Specifications folder)  Goal is fastest route to a useful first release version Map out features to add in subsequent release versions   Set up Markup documentation Set up Git and GitHub in Xcode Install and set up Playgrounds Set up Unit Tests Set up UI Tests Read Swift 5 Apple documentation Watch Swift 5 videos and older   DONE ..." />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="1 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="1 ❤" />
+<meta property="article:published_time" content="2022-11-28T19:54:20+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler">
+    	<header class="lns-site-header" role="banner">
+		<div class="lns-header-main">
+			<h1 class="lns-site-title"><a href="http://latenightsw.com/" rel="home">Late Night Software</a></h1>
+
+			<nav class="lns-site-navigation lns-primary-navigation" role="navigation">
+				<div class="lns-menu-main-menu-container">
+					<ul id="primary-menu" class="lns-nav-menu">
+						<li id="menu-item-959" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-959"><a href="http://latenightsw.com/"><strong>Script Debugger 8</strong></a></li>
+						<li id="menu-item-962" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-962"><a href="http://latenightsw.com/download/"><strong>Download</strong></a></li>
+						<li id="menu-item-960" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item menu-item-960"><a href="http://forum.latenightsw.com">Forum</a></li>
+						<li id="menu-item-961" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-961"><a href="http://latenightsw.com/support/">Support</a></li>
+						<li id="menu-item-957" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-957"><a href="http://latenightsw.com/lnsblog/">Blog</a></li>
+						<li id="menu-item-964" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-964"><a href="http://latenightsw.com/company/">Company</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+
+<link rel="preload" href="/theme-javascripts/25785c29cfca3c390246b59eaa9819f095b56ebb.js?__ws=forum.latenightsw.com" as="script">
+<script defer="" src="/theme-javascripts/25785c29cfca3c390246b59eaa9819f095b56ebb.js?__ws=forum.latenightsw.com" data-theme-id="15"></script>
+
+    <header>
+  <a href="/">
+    Late Night Software Ltd.
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/ui-browser-3-original-tasks/4070">UI Browser 3 Original Tasks</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="https://forum.latenightsw.com/c/uibrowser/17" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #92278F'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>UI Browser</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://forum.latenightsw.com/tag/documentation' class='discourse-tag' rel="tag">documentation</a>, 
+            <a href='https://forum.latenightsw.com/tag/ui-browser-4' class='discourse-tag' rel="tag">ui-browser-4</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+
+      <div id='post_1' itemscope itemtype='http://schema.org/DiscussionForumPosting' class='topic-body crawler-post'>
+        <div class='crawler-post-meta'>
+          <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+            <meta itemprop='name' content='Late Night Software'>
+              <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+                <meta itemprop='url' content='https://forum.latenightsw.com/uploads/default/original/1X/1e7f2ed7fb94bd744bd472a3c9dc6a0106e92ba8.png'>
+              </div>
+          </div>
+          <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <a itemprop="url" href='https://forum.latenightsw.com/u/alldritt'><span itemprop='name'>alldritt</span></a>
+            (Mark Alldritt)
+          </span>
+
+          <link itemprop="mainEntityOfPage" href="https://forum.latenightsw.com/t/ui-browser-3-original-tasks/4070">
+
+
+          <span class="crawler-post-infos">
+              <time itemprop='datePublished' datetime='2022-11-28T19:54:20Z' class='post-time'>
+                November 28, 2022,  7:54pm
+              </time>
+              <meta itemprop='dateModified' content='2022-11-28T21:17:35Z'>
+          <span itemprop='position'>#1</span>
+          </span>
+        </div>
+        <div class='post' itemprop='articleBody'>
+          <p>Continuing the discussion from <a href="https://forum.latenightsw.com/t/ui-browser-documents/4065">UI Browser Documents</a>:</p>
+<ul>
+<li>GOALS
+<ul>
+<li>Rewrite UI Browser in Swift 5 as 3.0.0</li>
+</ul>
+</li>
+<li>APPROACH
+<ul>
+<li>Outline and rank UI Browser features to implement (see Specifications folder)
+<ul>
+<li>Goal is fastest route to a useful first release version</li>
+<li>Map out features to add in subsequent release versions</li>
+</ul>
+</li>
+<li>Set up Markup documentation</li>
+<li>Set up Git and GitHub in Xcode</li>
+<li>Install and set up Playgrounds</li>
+<li>Set up Unit Tests</li>
+<li>Set up UI Tests</li>
+<li>Read Swift 5 Apple documentation</li>
+<li>Watch Swift 5 videos and older</li>
+</ul>
+</li>
+<li>DONE as of 2019-10-27
+<ul>
+<li>Do auto-conversion to Swift 4.2</li>
+<li>Collect, reorganize, review and update all of my Swift documentation</li>
+<li>Collect and reorganize all of my design and task notes</li>
+<li>Review and revise my UI Browser folder (including UI Browser 3 Plan)</li>
+<li>Check Credits.html for reference to PFEventTaps Framework 1.5.5</li>
+<li>Update code and do BugzDB stuff</li>
+<li>Review script examples and text files, and update as needed<br>
+▸	Autoconvert a copy of existing UI Browser 3 project to Swift 4</li>
+<li>Review and reorganize UI Browser 3 Plan, including Features List, Execution Flow and Specifications</li>
+<li>Update UI Browser to 2.7.0
+<ul>
+<li>NO Test on AccessibilityUIExamples 3.0 sample code, especially the Transient UI example. Do this AFTER Apple’s AccessibilityInspector application starts working on High Sierra, for comparison purposes – as of dev beta 6 and Xcode 5, it is not working.</li>
+<li>√Test on 10.7 - 10.13</li>
+</ul>
+</li>
+<li>Update UI Browser to 2.7.0 for PFAssistive Framework 3.8.0 and macOS High Sierra 10.13 final release<br>
+▸	Fix ListTabItemViewController</li>
+<li>Finish modifications begun</li>
+<li>Fix items marked as not working in Change Logs</li>
+<li>Convert to Swift 5</li>
+<li>Code application features
+<ul>
+<li>toolbar item validation</li>
+<li>NSUserInterfaceValidations and NSValidatedUserInterfaceItem protocols for the reportButton</li>
+<li>applied them to the remaining user controls in the master split view item controller</li>
+<li>implement the NSMenuItemValidation protocol for the toolbar items’ corresponding menu items</li>
+<li>implementing the Outline view….</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>ROUTINES
+<ul>
+<li>Store Accessibility API documentation and articles by macOS release in …Cocoa/Accessibility API</li>
+<li>Store Swift general information in …Cocoa/Swift</li>
+<li>Store UI Browser specifications etc. in …UI Browser/UI Browser 3 Plan (current Swift)</li>
+</ul>
+</li>
+</ul>
+        </div>
+
+        <meta itemprop='headline' content='UI Browser 3 Original Tasks'>
+          <meta itemprop='keywords' content='documentation, ui-browser-4'>
+
+        <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+           <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+           <meta itemprop="userInteractionCount" content="1" />
+           <span class='post-likes'>1 Like</span>
+         </div>
+
+         <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+            <meta itemprop="interactionType" content="http://schema.org/CommentAction"/>
+            <meta itemprop="userInteractionCount" content="0" />
+          </div>
+
+            <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                  <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                    <a href="https://forum.latenightsw.com/t/ui-browser-4-documents/4065" itemscope itemtype='http://schema.org/DiscussionForumPosting' itemprop='item'>
+                      <meta itemprop='url' content='https://forum.latenightsw.com/t/ui-browser-4-documents/4065'>
+                      <span itemprop='name'>UI Browser 4 Documents</span>
+                    </a>
+                    <meta itemprop='position' content='1'>
+                  </div>
+            </div>
+      </div>
+
+
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/tos' itemprop="url">Terms of Service </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/privacy' itemprop="url">Privacy Policy </a>
+        </span>
+      </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    <a rel="me" href="https://mstdn.ca/@alldritt">Mastodon</a>
+  </body>
+  
+</html>
